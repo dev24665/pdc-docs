@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Demographic</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Demographic</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>Clinical</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>Data for the characterization of the patient by means of segmenting the population (e.g., characterization by age, sex, or race).</div>
+                    <a href="#" target='_blank'>( - )</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>demographic_id</li><li>demographic_submitter_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Case.html">Case</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Demographic references the Case it is derived from.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='ethnicity'>ethnicity</td>
+                <td class='propCollCol2'>An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>hispanic or latino</li><li>not hispanic or latino</li><li>not reported</li><li>not allowed to collect</li><li>Unknown</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>2192217 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='gender'>gender</td>
+                <td class='propCollCol2'>Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]</td>
+                <td class='propCollCol3'>Enumeration<ul><li>female</li><li>male</li><li>unknown</li><li>unspecified</li><li>not reported</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>2200604 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='race'>race</td>
+                <td class='propCollCol2'>An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>white</li><li>american indian or alaska native</li><li>black or african american</li><li>asian</li><li>native hawaiian or other pacific islander</li><li>other</li><li>not reported</li><li>not allowed to collect</li><li>Unknown</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>2192199 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='age_at_index'>age_at_index</td>
+                <td class='propCollCol2'>The patient's age (in years) on the reference or anchor date date used during date obfuscation.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6028530 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='age_is_obfuscated'>age_is_obfuscated</td>
+                <td class='propCollCol2'>The age of the patient has been modified for compliance reasons. The actual age differs from what is reported. Other date intervals for this patient may also be modified.
+</td>
+                <td class='propCollCol3'>Boolean</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='cause_of_death'>cause_of_death</td>
+                <td class='propCollCol2'>Text term to identify the cause of death for a patient.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Cancer Related</li><li>Cardiovascular Disorder, NOS</li><li>End-stage Renal Disease</li><li>Infection</li><li>Not Cancer Related</li><li>Renal Disorder, NOS</li><li>Spinal Muscular Atrophy</li><li>Surgical Complications</li><li>Toxicity</li><li>Not Reported</li></ul><ul class='enum-list' style='display:none;'><li>Unknown</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2554674 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='cause_of_death_source'>cause_of_death_source</td>
+                <td class='propCollCol2'>The text term used to describe the source used to determine the patient's cause of death.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Autopsy</li><li>Death Certificate</li><li>Medical Record</li><li>Social Security Death Index</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='country_of_residence_at_enrollment'>country_of_residence_at_enrollment</td>
+                <td class='propCollCol2'>The text term used to describe the patient's country of residence at the time they were enrolled in the study.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Afghanistan</li><li>Albania</li><li>Algeria</li><li>Andorra</li><li>Angola</li><li>Anguilla</li><li>Antigua and Barbuda</li><li>Argentina</li><li>Armenia</li><li>Aruba</li></ul><ul class='enum-list' style='display:none;'><li>Australia</li><li>Austria</li><li>Azerbaijan</li><li>Bahamas</li><li>Bahrain</li><li>Bangladesh</li><li>Barbados</li><li>Belarus</li><li>Belgium</li><li>Belize</li><li>Benin</li><li>Bermuda</li><li>Bhutan</li><li>Bolivia</li><li>Bosnia and Herzegovina</li><li>Botswana</li><li>Brazil</li><li>Brunei</li><li>Bulgaria</li><li>Burkina Faso</li><li>Burundi</li><li>Cambodia</li><li>Cameroon</li><li>Canada</li><li>Cape Verde</li><li>Cayman Islands</li><li>Central African Republic</li><li>Chad</li><li>Chile</li><li>China</li><li>Colombia</li><li>Comoros</li><li>Congo</li><li>Cook Islands</li><li>Costa Rica</li><li>Cote d'Ivoire</li><li>Croatia</li><li>Cuba</li><li>Curacao</li><li>Cyprus</li><li>Czech Republic (Czechia)</li><li>Democratic Republic of the Congo</li><li>Denmark</li><li>Djibouti</li><li>Dominica</li><li>Dominican Republic</li><li>Ecuador</li><li>Egypt</li><li>El Salvador</li><li>Equatorial Guinea</li><li>Eritrea</li><li>Estonia</li><li>Eswatini</li><li>Ethiopia</li><li>Falkland Islands (Malvinas)</li><li>Faroe Islands</li><li>Federated States of Micronesia</li><li>Fiji</li><li>Finland</li><li>France</li><li>French Guiana</li><li>French Polynesia</li><li>Gabon</li><li>Gambia</li><li>Georgia</li><li>Germany</li><li>Ghana</li><li>Gibraltar</li><li>Greece</li><li>Greenland</li><li>Grenada</li><li>Guadeloupe</li><li>Guam</li><li>Guatemala</li><li>Guernsey</li><li>Guinea</li><li>Guinea-Bissau</li><li>Guyana</li><li>Haiti</li><li>Holy See</li><li>Honduras</li><li>Hong Kong</li><li>Hungary</li><li>Iceland</li><li>India</li><li>Indonesia</li><li>Iran</li><li>Iraq</li><li>Ireland</li><li>Isle of Man</li><li>Israel</li><li>Italy</li><li>Jamaica</li><li>Japan</li><li>Jersey</li><li>Jordan</li><li>Kazakhstan</li><li>Kenya</li><li>Kiribati</li><li>Kosovo</li><li>Kuwait</li><li>Kyrgyzstan</li><li>Laos</li><li>Latvia</li><li>Lebanon</li><li>Lesotho</li><li>Liberia</li><li>Libya</li><li>Liechtenstein</li><li>Lithuania</li><li>Luxembourg</li><li>Macau</li><li>Madagascar</li><li>Malawi</li><li>Malaysia</li><li>Maldives</li><li>Mali</li><li>Malta</li><li>Marshall Islands</li><li>Martinique</li><li>Mauritania</li><li>Mauritius</li><li>Mayotte</li><li>Mexico</li><li>Moldova</li><li>Monaco</li><li>Mongolia</li><li>Montenegro</li><li>Montserrat</li><li>Morocco</li><li>Mozambique</li><li>Myanmar</li><li>Namibia</li><li>Nauru</li><li>Nepal</li><li>Netherlands</li><li>New Caledonia</li><li>New Zealand</li><li>Nicaragua</li><li>Niger</li><li>Nigeria</li><li>Niue</li><li>North Korea</li><li>North Macedonia</li><li>Northern Mariana Islands</li><li>Norway</li><li>Oman</li><li>Pakistan</li><li>Palau</li><li>Panama</li><li>Papua New Guinea</li><li>Paraguay</li><li>Peru</li><li>Philippines</li><li>Poland</li><li>Portugal</li><li>Puerto Rico</li><li>Qatar</li><li>Reunion</li><li>Romania</li><li>Russia</li><li>Rwanda</li><li>Saint Helena, Ascension and Tristan da Cunha</li><li>Saint Kitts and Nevis</li><li>Saint Lucia</li><li>Saint Pierre and Miquelon</li><li>Saint Vincent and the Grenadines</li><li>Samoa</li><li>San Marino</li><li>Sao Tome and Principe</li><li>Saudi Arabia</li><li>Senegal</li><li>Serbia</li><li>Seychelles</li><li>Sierra Leone</li><li>Singapore</li><li>Slovakia</li><li>Slovenia</li><li>Solomon Islands</li><li>Somalia</li><li>South Africa</li><li>South Korea</li><li>South Sudan</li><li>Spain</li><li>Sri Lanka</li><li>State of Palestine</li><li>Sudan</li><li>Suriname</li><li>Svalbard & Jan Mayen Islands</li><li>Sweden</li><li>Switzerland</li><li>Syria</li><li>Taiwan</li><li>Tajikistan</li><li>Tanzania</li><li>Thailand</li><li>Timor-Leste</li><li>Togo</li><li>Tokelau</li><li>Tonga</li><li>Trinidad and Tobago</li><li>Tunisia</li><li>Turkey</li><li>Turkmenistan</li><li>Tuvalu</li><li>Uganda</li><li>Ukraine</li><li>United Arab Emirates</li><li>United Kingdom</li><li>United States</li><li>Uruguay</li><li>Uzbekistan</li><li>Vanuatu</li><li>Venezuela</li><li>Vietnam</li><li>Virgin Islands, British</li><li>Virgin Islands, U.S.</li><li>Wallis and Futuna</li><li>Western Sahara</li><li>Yemen</li><li>Zambia</li><li>Zimbabwe</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>7050286 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_birth'>days_to_birth</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date from a person's date of birth represented as a calculated negative number of days.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154723 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_death'>days_to_death</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date from a person's date of death represented as a calculated number of days.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154724 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='occupation_duration_years'>occupation_duration_years</td>
+                <td class='propCollCol2'>The number of years a patient worked in a specific occupation.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2435424 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='premature_at_birth'>premature_at_birth</td>
+                <td class='propCollCol2'>The yes/no/unknown indicator used to describe whether the patient was premature (less than 37 weeks gestation) at birth.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6010765 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='vital_status'>vital_status</td>
+                <td class='propCollCol2'>The survival state of the person registered on the protocol.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Alive</li><li>Dead</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='weeks_gestation_at_birth'>weeks_gestation_at_birth</td>
+                <td class='propCollCol2'>Numeric value used to describe the number of weeks starting from the approximate date of the biological mother's last menstrual period and ending with the birth of the patient.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2737369 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='year_of_birth'>year_of_birth</td>
+                <td class='propCollCol2'>Numeric value to represent the calendar year in which an individual was born.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2896954 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='year_of_death'>year_of_death</td>
+                <td class='propCollCol2'>Numeric value to represent the year of the death of an individual.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2897030 - caDSR </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>

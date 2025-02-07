@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Case</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Case</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>Administrative</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>The collection of all data related to a specific subject in the context of a specific project.</div>
+                    <a href="#" target='_blank'>( - )</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>case_id</li><li>case_submitter_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Project.html">Project</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Case references the Project it belongs to.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='external_case_id'>external_case_id</td>
+                <td class='propCollCol2'>Identifier from other resources for this case</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='disease_type'>disease_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of malignant disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Acinar Cell Neoplasms</li><li>Adenomas and Adenocarcinomas</li><li>Adnexal and Skin Appendage Neoplasms</li><li>Basal Cell Neoplasms</li><li>Blood Vessel Tumors</li><li>Chronic Myeloproliferative Disorders</li><li>Complex Epithelial Neoplasms</li><li>Complex Mixed and Stromal Neoplasms</li><li>Cystic, Mucinous and Serous Neoplasms</li><li>Ductal and Lobular Neoplasms</li></ul><ul class='enum-list' style='display:none;'><li>Epithelial Neoplasms, NOS</li><li>Fibroepithelial Neoplasms</li><li>Fibromatous Neoplasms</li><li>Germ Cell Neoplasms</li><li>Giant Cell Tumors</li><li>Gliomas</li><li>Granular Cell Tumors and Alveolar Soft Part Sarcomas</li><li>Hodgkin Lymphoma</li><li>Immunoproliferative Diseases</li><li>Leukemias, NOS</li><li>Lipomatous Neoplasms</li><li>Lymphatic Vessel Tumors</li><li>Lymphoid Leukemias</li><li>Malignant Lymphomas, NOS or Diffuse</li><li>Mast Cell Tumors</li><li>Mature B-Cell Lymphomas</li><li>Mature T- and NK-Cell Lymphomas</li><li>Meningiomas</li><li>Mesonephromas</li><li>Mesothelial Neoplasms</li><li>Miscellaneous Bone Tumors</li><li>Miscellaneous Tumors</li><li>Mucoepidermoid Neoplasms</li><li>Myelodysplastic Syndromes</li><li>Myeloid Leukemias</li><li>Myomatous Neoplasms</li><li>Myxomatous Neoplasms</li><li>Neoplasms, NOS</li><li>Neoplasms of Histiocytes and Accessory Lymphoid Cells</li><li>Nerve Sheath Tumors</li><li>Neuroepitheliomatous Neoplasms</li><li>Nevi and Melanomas</li><li>Non-Clear Cell Renal Cell Carcinoma</li><li>Odontogenic Tumors</li><li>Osseous and Chondromatous Neoplasms</li><li>Other Hematologic Disorders</li><li>Other Leukemias</li><li>Paragangliomas and Glomus Tumors</li><li>Plasma Cell Tumors</li><li>Precursor Cell Lymphoblastic Lymphoma</li><li>Soft Tissue Tumors and Sarcomas, NOS</li><li>Specialized Gonadal Neoplasms</li><li>Squamous Cell Neoplasms</li><li>Synovial-like Neoplasms</li><li>Thymic Epithelial Neoplasms</li><li>Transitional Cell Papillomas and Carcinomas</li><li>Trophoblastic neoplasms</li><li>Unknown</li><li>Not Reported</li><li>Not Applicable</li><li>Acute Lymphoblastic Leukemia</li><li>Acute Myeloid Leukemia</li><li>Adrenocortical Carcinoma</li><li>Bladder Urothelial Carcinoma</li><li>Brain Lower Grade Glioma</li><li>Breast Invasive Carcinoma</li><li>Burkitt Lymphoma</li><li>Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma</li><li>Cholangiocarcinoma</li><li>Chronic Lymphocytic Leukemia</li><li>Clear Cell Sarcoma of the Kidney</li><li>Colon Adenocarcinoma</li><li>Esophageal Carcinoma</li><li>Glioblastoma Multiforme</li><li>Head and Neck Squamous Cell Carcinoma</li><li>High-Risk Wilms Tumor</li><li>HIV+ Tumor Molecular Characterization Project - Cervical Cancer</li><li>HIV+ Tumor Molecular Characterization Project - Lung Cancer</li><li>Kidney Chromophobe</li><li>Kidney Renal Clear Cell Carcinoma</li><li>Kidney Renal Papillary Cell Carcinoma</li><li>Liver Hepatocellular Carcinoma</li><li>Lung Adenocarcinoma</li><li>Lung Squamous Cell Carcinoma</li><li>Lymphoid Neoplasm Diffuse Large B-cell Lymphoma</li><li>Mesothelioma</li><li>Multiple Myeloma</li><li>Neuroblastoma</li><li>Osteosarcoma</li><li>Ovarian Serous Cystadenocarcinoma</li><li>Pancreatic Adenocarcinoma</li><li>Pheochromocytoma and Paraganglioma</li><li>Prostate Adenocarcinoma</li><li>Rectum Adenocarcinoma</li><li>Rhabdoid Tumor</li><li>Sarcoma</li><li>Skin Cutaneous Melanoma</li><li>Stomach Adenocarcinoma</li><li>Testicular Germ Cell Tumors</li><li>Thymoma</li><li>Thyroid Carcinoma</li><li>Uterine Adenocarcinoma</li><li>Uterine Carcinosarcoma</li><li>Uterine Corpus Endometrial Carcinoma</li><li>Uveal Melanoma</li><li>Clear Cell Renal Cell Carcinoma</li><li>Early Onset Gastric Cancer</li><li>Glioblastoma</li><li>Other</li><li>Hepatocellular Carcinoma</li><li>Chromophobe Renal Cell Carcinoma</li><li>Papillary Renal Cell Carcinoma</li><li>Pediatric/AYA Brain Tumors</li><li>Oral Squamous Cell Carcinoma</li><li>Pancreatic Ductal Adenocarcinoma</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>6161017 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='pool'>pool</td>
+                <td class='propCollCol2'>Any biospecimen entity where multiple cases, samples or aliquots are combined to produce a reference. Sample pooling is commonly used for determining relative protein abundances in labeling experiments.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='primary_site'>primary_site</td>
+                <td class='propCollCol2'>The text term used to describe the general location of the malignant disease, as categorized by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Accessory sinuses</li><li>Anus and anal canal</li><li>Base of tongue</li><li>Bladder</li><li>Bones, joints and articular cartilage of limbs</li><li>Bones, joints and articular cartilage of other and unspecified sites</li><li>Brain</li><li>Breast</li><li>Bronchus and lung</li><li>Cervix uteri</li></ul><ul class='enum-list' style='display:none;'><li>Colon</li><li>Connective, subcutaneous and other soft tissues</li><li>Corpus uteri</li><li>Esophagus</li><li>Eye and adnexa</li><li>Floor of mouth</li><li>Gallbladder</li><li>Gum</li><li>Heart, mediastinum, and pleura</li><li>Hematopoietic and reticuloendothelial systems</li><li>Hypopharynx</li><li>Kidney</li><li>Larynx</li><li>Lip</li><li>Liver and intrahepatic bile ducts</li><li>Meninges</li><li>Nasal cavity and middle ear</li><li>Nasopharynx</li><li>Oropharynx</li><li>Other and ill-defined digestive organs</li><li>Other and ill-defined sites</li><li>Other and ill-defined sites in lip, oral cavity and pharynx</li><li>Other and ill-defined sites within respiratory system and intrathoracic organs</li><li>Other and unspecified female genital organs</li><li>Other and unspecified major salivary glands</li><li>Other and unspecified male genital organs</li><li>Other and unspecified parts of biliary tract</li><li>Other and unspecified parts of mouth</li><li>Other and unspecified parts of tongue</li><li>Other and unspecified urinary organs</li><li>Other endocrine glands and related structures</li><li>Ovary</li><li>Palate</li><li>Pancreas</li><li>Parotid gland</li><li>Penis</li><li>Peripheral nerves and autonomic nervous system</li><li>Placenta</li><li>Prostate gland</li><li>Pyriform sinus</li><li>Rectosigmoid junction</li><li>Rectum</li><li>Renal pelvis</li><li>Retroperitoneum and peritoneum</li><li>Skin</li><li>Small intestine</li><li>Spinal cord, cranial nerves, and other parts of central nervous system</li><li>Stomach</li><li>Testis</li><li>Thymus</li><li>Thyroid gland</li><li>Tonsil</li><li>Trachea</li><li>Ureter</li><li>Uterus, NOS</li><li>Vagina</li><li>Vulva</li><li>Unknown</li><li>Not Reported</li><li>Bile Duct</li><li>Blood</li><li>Bone</li><li>Bone Marrow</li><li>Cervix</li><li>Colorectal</li><li>Eye</li><li>Head and Neck</li><li>Liver</li><li>Lung</li><li>Nervous System</li><li>Not Applicable</li><li>Pleura</li><li>Prostate</li><li>Soft Tissue</li><li>Thyroid</li><li>Uterus</li><li>Adrenal gland</li><li>Lymph nodes</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>6161019 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='status'>status</td>
+                <td class='propCollCol2'>Specifies if the case is qualified or disqualified for any reason. Usually the data related to such cases may be not used in the data analysis.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Qualified</li><li>Disqualified</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='taxon'>taxon</td>
+                <td class='propCollCol2'>A taxonomic group, such as a species.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Trichomonas vaginalis</li><li>Bemisia tabaci (Gennadius)</li><li>Escherichia coli</li><li>Rattus norvegicus</li><li>Mycoplasma pneumoniae</li><li>Takifugu rubripes</li><li>Pneumocystis carinii</li><li>Canis familiaris</li><li>Arabidopsis thaliana</li><li>Dictyostelium discoideum</li></ul><ul class='enum-list' style='display:none;'><li>Oryza sativa</li><li>Plasmodium falciparum</li><li>Anopheles gambiae</li><li>Chlamydomonas reinhardtii</li><li>Caenorhabditis remanei</li><li>Schizosaccharomyces pombe</li><li>Pseudomonas aeruginosa</li><li>Staphylococcus aureus</li><li>Gallus gallus</li><li>Zea mays</li><li>Caenorhabditis briggsae</li><li>Haliotis rufescens</li><li>Xenopus laevis</li><li>Mucata mulata</li><li>Unspecified</li><li>Bos taurus</li><li>Caenorhabditis elegans</li><li>Danio rerio (zebrafish)</li><li>Hepatitis C virus</li><li>Saccharomyces cerevisiae</li><li>Drosophila melanogaster</li><li>Sus scrofa</li><li>Gasterosteus aculeatus (fish)</li><li>Homo sapiens</li><li>Mus musculus</li><li>Not Reported</li><li>Homo sapiens; Mus musculus</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='case_is_ref'>case_is_ref</td>
+                <td class='propCollCol2'>A biospecimen entity which is used as a reference sample for determining relative protein abundances in labeling experiments.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='consent_type'>consent_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of consent obtain from the subject for participation in the study.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Consent by Death</li><li>Consent Exemption</li><li>Consent Waiver</li><li>Informed Consent</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_consent'>days_to_consent</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date the subject consent was obtained for participation in the study.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_lost_to_followup'>days_to_lost_to_followup</td>
+                <td class='propCollCol2'>The number of days between the date used for index and to the date the patient was lost to follow-up.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'></td>
+                <td class='propCollCol5'>6154721 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='index_date'>index_date</td>
+                <td class='propCollCol2'>The text term used to describe the reference or anchor date used when for date obfuscation, where a single date is obscured by creating one or more date ranges in relation to this date.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Diagnosis</li><li>First Patient Visit</li><li>First Treatment</li><li>Initial Genomic Sequencing</li><li>Sample Procurement</li><li>Study Enrollment</li><li>Recurrence</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154722 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='lost_to_followup'>lost_to_followup</td>
+                <td class='propCollCol2'>The yes/no/unknown indicator used to describe whether a patient was unable to be contacted or seen for follow-up information.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li></ul></td>
+                <td class='propCollCol4'></td>
+                <td class='propCollCol5'>6161018 - caDSR </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>
