@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Sample</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Sample</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>Biospecimen</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions. Biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products.</div>
+                    <a href="#" target='_blank'>( - )</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>sample_id</li><li>sample_submitter_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Case.html">Case</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Sample references the Case it is derived from.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='gdc_project_id'>gdc_project_id</td>
+                <td class='propCollCol2'>Project identifier associated with the sample at the genomic data commons</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='gdc_sample_id'>gdc_sample_id</td>
+                <td class='propCollCol2'>Sample identifier associated with the sample at the genomic data commons</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='sample_type_id'>sample_type_id</td>
+                <td class='propCollCol2'>The accompanying sample type id for the sample type.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>01</li><li>02</li><li>03</li><li>04</li><li>05</li><li>06</li><li>07</li><li>08</li><li>09</li><li>10</li></ul><ul class='enum-list' style='display:none;'><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li><li>20</li><li>30</li><li>31</li><li>32</li><li>40</li><li>41</li><li>42</li><li>50</li><li>60</li><li>61</li><li>85</li><li>86</li><li>99</li><li>87</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='tumor_code_id'>tumor_code_id</td>
+                <td class='propCollCol2'>BCR-defined id code for the tumor sample.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>00</li><li>01</li><li>02</li><li>03</li><li>04</li><li>10</li><li>15</li><li>20</li><li>21</li><li>30</li></ul><ul class='enum-list' style='display:none;'><li>40</li><li>41</li><li>50</li><li>51</li><li>52</li><li>60</li><li>61</li><li>62</li><li>63</li><li>64</li><li>65</li><li>70</li><li>71</li><li>80</li><li>81</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='composition'>composition</td>
+                <td class='propCollCol2'>Text term that represents the cellular composition of the sample.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>2D Classical Conditionally Reprogrammed Cells</li><li>2D Modified Conditionally Reprogrammed Cells</li><li>3D Organoid</li><li>3D Air-Liquid Interface Organoid</li><li>3D Neurosphere</li><li>Adherent Cell Line</li><li>Buccal Cells</li><li>Buffy Coat</li><li>Bone Marrow Components</li><li>Bone Marrow Components NOS</li></ul><ul class='enum-list' style='display:none;'><li>Control Analyte</li><li>Cell</li><li>Derived Cell Line</li><li>EBV Immortalized</li><li>Fibroblasts from Bone Marrow Normal</li><li>Granulocytes</li><li>Human Original Cells</li><li>Liquid Suspension Cell Line</li><li>Lymphocytes</li><li>Mononuclear Cells from Bone Marrow Normal</li><li>Peripheral Blood Components NOS</li><li>Pleural Effusion</li><li>Plasma</li><li>Peripheral Whole Blood</li><li>Serum</li><li>Saliva</li><li>Sputum</li><li>Solid Tissue</li><li>Sorted Cells</li><li>Whole Bone Marrow</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li><li>Mixed Adherent Suspension</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>5432591 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='pool'>pool</td>
+                <td class='propCollCol2'>Any biospecimen entity where multiple cases, samples or aliquots are combined to produce a reference. Sample pooling is commonly used for determining relative protein abundances in labeling experiments.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='sample_type'>sample_type</td>
+                <td class='propCollCol2'>Text term to describe the source of a biospecimen used for a laboratory test.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Additional Metastatic</li><li>Additional - New Primary</li><li>Benign Neoplasms</li><li>Blood Derived Cancer - Bone Marrow</li><li>Blood Derived Cancer - Bone Marrow, Post-treatment</li><li>Blood Derived Cancer - Peripheral Blood</li><li>Blood Derived Cancer - Peripheral Blood, Post-treatment</li><li>Blood Derived Liquid Biopsy</li><li>Blood Derived Normal</li><li>Bone Marrow Normal</li></ul><ul class='enum-list' style='display:none;'><li>Buccal Cell Normal</li><li>Cell Line Derived Xenograft Tissue</li><li>Cell Lines</li><li>Control Analyte</li><li>DNA</li><li>EBV Immortalized Normal</li><li>Expanded Next Generation Cancer Model</li><li>FFPE Recurrent</li><li>FFPE Scrolls</li><li>Fibroblasts from Bone Marrow Normal</li><li>GenomePlex (Rubicon) Amplified DNA</li><li>Granulocytes</li><li>Human Tumor Original Cells</li><li>In Situ Neoplasms</li><li>Lymphoid Normal</li><li>Metastatic</li><li>Mononuclear Cells from Bone Marrow Normal</li><li>Normal Adjacent Tissue</li><li>Neoplasms of Uncertain and Unknown Behavior</li><li>Next Generation Cancer Model</li><li>Primary Blood Derived Cancer - Peripheral Blood</li><li>Recurrent Blood Derived Cancer - Peripheral Blood</li><li>Pleural Effusion</li><li>Primary Blood Derived Cancer - Bone Marrow</li><li>Primary Tumor</li><li>Primary Xenograft Tissue</li><li>Post neo-adjuvant therapy</li><li>Recurrent Blood Derived Cancer - Bone Marrow</li><li>Recurrent Tumor</li><li>Repli-G (Qiagen) DNA</li><li>Repli-G X (Qiagen) DNA</li><li>RNA</li><li>Slides</li><li>Solid Tissue Normal</li><li>Total RNA</li><li>Tumor Adjacent Normal - Post Neo-adjuvant Therapy</li><li>Tumor</li><li>Xenograft Tissue</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li><li>Next Generation Cancer Model Expanded Under Non-conforming Conditions</li><li>Mixed Adherent Suspension</li><li>Saliva</li><li>Serum</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>3111302 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='status'>status</td>
+                <td class='propCollCol2'>Specifies if the sample is qualified or disqualified for any reason.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='tissue_type'>tissue_type</td>
+                <td class='propCollCol2'>Text term that represents a description of the kind of tissue collected with respect to disease status or proximity to tumor tissue.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Tumor</li><li>Normal</li><li>Abnormal</li><li>Peritumoral</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>5432687 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='biospecimen_anatomic_site'>biospecimen_anatomic_site</td>
+                <td class='propCollCol2'>Text term that represents the name of the primary disease site of the submitted tumor sample.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Abdomen</li><li>Abdominal Wall</li><li>Acetabulum</li><li>Adenoid</li><li>Adipose</li><li>Adrenal</li><li>Alveolar Ridge</li><li>Amniotic Fluid</li><li>Ampulla Of Vater</li><li>Anal Sphincter</li></ul><ul class='enum-list' style='display:none;'><li>Ankle</li><li>Anorectum</li><li>Antecubital Fossa</li><li>Antrum</li><li>Anus</li><li>Aorta</li><li>Aortic Body</li><li>Appendix</li><li>Aqueous Fluid</li><li>Arm</li><li>Artery</li><li>Ascending Colon</li><li>Ascending Colon Hepatic Flexure</li><li>Auditory Canal</li><li>Autonomic Nervous System</li><li>Axilla</li><li>Back</li><li>Bile Duct</li><li>Bladder</li><li>Blood</li><li>Blood Vessel</li><li>Bone</li><li>Bone Marrow</li><li>Bowel</li><li>Brain</li><li>Brain Stem</li><li>Breast</li><li>Broad Ligament</li><li>Bronchiole</li><li>Bronchus</li><li>Brow</li><li>Buccal Cavity</li><li>Buccal Mucosa</li><li>Buttock</li><li>Calf</li><li>Capillary</li><li>Cardia</li><li>Carina</li><li>Carotid Artery</li><li>Carotid Body</li><li>Cartilage</li><li>Cecum</li><li>Cell-Line</li><li>Central Nervous System</li><li>Cerebellum</li><li>Cerebral Cortex</li><li>Cerebrospinal Fluid</li><li>Cerebrum</li><li>Cervical Spine</li><li>Cervix</li><li>Chest</li><li>Chest Wall</li><li>Chin</li><li>Clavicle</li><li>Clitoris</li><li>Colon</li><li>Colon - Mucosa Only</li><li>Common Duct</li><li>Conjunctiva</li><li>Connective Tissue</li><li>Dermal</li><li>Descending Colon</li><li>Diaphragm</li><li>Duodenum</li><li>Ear</li><li>Ear Canal</li><li>Ear, Pinna (External)</li><li>Effusion</li><li>Elbow</li><li>Endocrine Gland</li><li>Epididymis</li><li>Epidural Space</li><li>Esophageal; Distal</li><li>Esophageal; Mid</li><li>Esophageal; Proximal</li><li>Esophagogastric Junction</li><li>Esophagus</li><li>Esophagus - Mucosa Only</li><li>Eye</li><li>Fallopian Tube</li><li>Femoral Artery</li><li>Femoral Vein</li><li>Femur</li><li>Fibroblasts</li><li>Fibula</li><li>Finger</li><li>Floor Of Mouth</li><li>Fluid</li><li>Foot</li><li>Forearm</li><li>Forehead</li><li>Foreskin</li><li>Frontal Cortex</li><li>Frontal Lobe</li><li>Fundus Of Stomach</li><li>Gallbladder</li><li>Ganglia</li><li>Gastroesophageal Junction</li><li>Gastrointestinal Tract</li><li>Groin</li><li>Gum</li><li>Hand</li><li>Hard Palate</li><li>Head & Neck</li><li>Head - Face Or Neck, Nos</li><li>Heart</li><li>Hepatic</li><li>Hepatic Duct</li><li>Hepatic Flexure</li><li>Hepatic Vein</li><li>Hip</li><li>Hippocampus</li><li>Humerus</li><li>Hypopharynx</li><li>Ileum</li><li>Ilium</li><li>Index Finger</li><li>Ischium</li><li>Islet Cells</li><li>Jaw</li><li>Jejunum</li><li>Joint</li><li>Kidney</li><li>Knee</li><li>Lacrimal Gland</li><li>Large Bowel</li><li>Laryngopharynx</li><li>Larynx</li><li>Leg</li><li>Leptomeninges</li><li>Ligament</li><li>Lip</li><li>Liver</li><li>Lumbar Spine</li><li>Lung</li><li>Lymph Node</li><li>Lymph Node(s) Axilla</li><li>Lymph Node(s) Cervical</li><li>Lymph Node(s) Distant</li><li>Lymph Node(s) Epitrochlear</li><li>Lymph Node(s) Femoral</li><li>Lymph Node(s) Hilar</li><li>Lymph Node(s) Iliac-Common</li><li>Lymph Node(s) Iliac-External</li><li>Lymph Node(s) Inguinal</li><li>Lymph Node(s) Internal Mammary</li><li>Lymph Node(s) Mammary</li><li>Lymph Node(s) Mesenteric</li><li>Lymph Node(s) Occipital</li><li>Lymph Node(s) Paraaortic</li><li>Lymph Node(s) Parotid</li><li>Lymph Node(s) Pelvic</li><li>Lymph Node(s) Popliteal</li><li>Lymph Node(s) Regional</li><li>Lymph Node(s) Retroperitoneal</li><li>Lymph Node(s) Scalene</li><li>Lymph Node(s) Splenic</li><li>Lymph Node(s) Subclavicular</li><li>Lymph Node(s) Submandibular</li><li>Lymph Node(s) Supraclavicular</li><li>Lymph Nodes(s) Mediastinal</li><li>Mandible</li><li>Maxilla</li><li>Mediastinal Soft Tissue</li><li>Mediastinum</li><li>Mesentery</li><li>Mesothelium</li><li>Middle Finger</li><li>Mitochondria</li><li>Muscle</li><li>Nails</li><li>Nasal Cavity</li><li>Nasal Soft Tissue</li><li>Nasopharynx</li><li>Neck</li><li>Nerve</li><li>Nerve(s) Cranial</li><li>Occipital Cortex</li><li>Ocular Orbits</li><li>Omentum</li><li>Oral Cavity</li><li>Oral Cavity - Mucosa Only</li><li>Oropharynx</li><li>Other</li><li>Ovary</li><li>Palate</li><li>Pancreas</li><li>Paraspinal Ganglion</li><li>Parathyroid</li><li>Parotid Gland</li><li>Patella</li><li>Pelvis</li><li>Penis</li><li>Pericardium</li><li>Periorbital Soft Tissue</li><li>Peritoneal Cavity</li><li>Peritoneum</li><li>Pharynx</li><li>Pineal</li><li>Pineal Gland</li><li>Pituitary Gland</li><li>Placenta</li><li>Pleura</li><li>Popliteal Fossa</li><li>Prostate</li><li>Pylorus</li><li>Rectosigmoid Junction</li><li>Rectum</li><li>Retina</li><li>Retro-Orbital Region</li><li>Retroperitoneum</li><li>Rib</li><li>Ring Finger</li><li>Round Ligament</li><li>Sacrum</li><li>Salivary Gland</li><li>Scalp</li><li>Scapula</li><li>Sciatic Nerve</li><li>Scrotum</li><li>Seminal Vesicle</li><li>Shoulder</li><li>Sigmoid Colon</li><li>Sinus</li><li>Sinus(es), Maxillary</li><li>Skeletal Muscle</li><li>Skin</li><li>Skull</li><li>Small Bowel</li><li>Small Bowel - Mucosa Only</li><li>Small Finger</li><li>Soft Tissue</li><li>Spinal Column</li><li>Spinal Cord</li><li>Spleen</li><li>Splenic Flexure</li><li>Sternum</li><li>Stomach</li><li>Stomach - Mucosa Only</li><li>Subcutaneous Tissue</li><li>Synovium</li><li>Temporal Cortex</li><li>Tendon</li><li>Testis</li><li>Thigh</li><li>Thoracic Spine</li><li>Thorax</li><li>Throat</li><li>Thumb</li><li>Thymus</li><li>Thyroid</li><li>Tibia</li><li>Tongue</li><li>Tonsil</li><li>Tonsil (Pharyngeal)</li><li>Trachea / Major Bronchi</li><li>Transverse Colon</li><li>Trunk</li><li>Umbilical Cord</li><li>Ureter</li><li>Urethra</li><li>Urinary Tract</li><li>Uterus</li><li>Uvula</li><li>Vagina</li><li>Vas Deferens</li><li>Vein</li><li>Venous</li><li>Vertebra</li><li>Vulva</li><li>White Blood Cells</li><li>Wrist</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li><li>Sublingual Gland</li><li>Submandibular Gland</li><li>Paranasal Sinuses</li><li>Supraglottis</li><li>Subglottis</li><li>Glottis</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>4742851 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='biospecimen_laterality'>biospecimen_laterality</td>
+                <td class='propCollCol2'>For tumors in paired organs, designates the side on which the specimen was obtained.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Bilateral</li><li>Left</li><li>Right</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2007875 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='catalog_reference'>catalog_reference</td>
+                <td class='propCollCol2'>HCMI catalog reference number for cancer model.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='current_weight'>current_weight</td>
+                <td class='propCollCol2'>Numeric value that represents the current weight of the sample, measured in milligrams.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432606 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_collection'>days_to_collection</td>
+                <td class='propCollCol2'>Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3008340 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_sample_procurement'>days_to_sample_procurement</td>
+                <td class='propCollCol2'>The number of days from the date the patient was diagnosed to the date of the procedure that produced the sample.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='diagnosis_pathologically_confirmed'>diagnosis_pathologically_confirmed</td>
+                <td class='propCollCol2'>The histologic description of tissue or cells confirmed by a pathology review of frozen or formalin fixed slide(s) completed after the diagnostic pathology review of the tumor sample used to extract analyte(s).</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='distance_normal_to_tumor'>distance_normal_to_tumor</td>
+                <td class='propCollCol2'>Text term to signify the distance between the tumor tissue and the normal control tissue that was procured for matching normal DNA.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Adjacent (< or = 2cm)</li><li>Distal (>2cm)</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3088708 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='distributor_reference'>distributor_reference</td>
+                <td class='propCollCol2'>Distributor reference number for cancer model.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3088708 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='freezing_method'>freezing_method</td>
+                <td class='propCollCol2'>Text term that represents the method used for freezing the sample.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432607 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='growth_rate'>growth_rate</td>
+                <td class='propCollCol2'>Rate at which the model grows, measured as hours to time to split.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='initial_weight'>initial_weight</td>
+                <td class='propCollCol2'>Numeric value that represents the initial weight of the sample, measured in milligrams.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432605 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='intermediate_dimension'>intermediate_dimension</td>
+                <td class='propCollCol2'>Intermediate dimension of the sample, in millimeters.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='is_ffpe'>is_ffpe</td>
+                <td class='propCollCol2'>Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in paraffin (FFPE).</td>
+                <td class='propCollCol3'>Enumeration<ul><li>true</li><li>false</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>4170557 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='longest_dimension'>longest_dimension</td>
+                <td class='propCollCol2'>Numeric value that represents the longest dimension of the sample, measured in millimeters.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432602 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='method_of_sample_procurement'>method_of_sample_procurement</td>
+                <td class='propCollCol2'>The method used to procure the sample used to extract analyte(s).</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Abdomino-perineal Resection of Rectum</li><li>Anterior Resection of Rectum</li><li>Ascites Drainage</li><li>Aspirate</li><li>Autopsy</li><li>Biopsy</li><li>Blood Draw</li><li>Bone Marrow Aspirate</li><li>Core Biopsy</li><li>Cystectomy</li></ul><ul class='enum-list' style='display:none;'><li>Endo Rectal Tumor Resection</li><li>Endoscopic Biopsy</li><li>Endoscopic Mucosal Resection (EMR)</li><li>Enucleation</li><li>Excisional Biopsy</li><li>Fine Needle Aspiration</li><li>Full Hysterectomy</li><li>Gross Total Resection</li><li>Hand Assisted Laparoscopic Radical Nephrectomy</li><li>Hysterectomy NOS</li><li>Incisional Biopsy</li><li>Indeterminant</li><li>Laparoscopic Biopsy</li><li>Laparoscopic Partial Nephrectomy</li><li>Laparoscopic Radical Nephrectomy</li><li>Laparoscopic Radical Prostatectomy with Robotics</li><li>Laparoscopic Radical Prostatectomy without Robotics</li><li>Left Hemicolectomy</li><li>Liquid Biopsy</li><li>Lobectomy</li><li>Local Resection (Exoresection; wall resection)</li><li>Lumpectomy</li><li>Lymphadenectomy</li><li>Metastasectomy</li><li>Modified Radical Mastectomy</li><li>Needle Biopsy</li><li>Omentectomy</li><li>Oophorectomy</li><li>Open Craniotomy</li><li>Open Partial Nephrectomy</li><li>Open Radical Nephrectomy</li><li>Open Radical Prostatectomy</li><li>Orchiectomy</li><li>Other</li><li>Other Surgical Resection</li><li>Pan-Procto Colectomy</li><li>Pancreatectomy</li><li>Paracentesis</li><li>Partial Hepatectomy</li><li>Peritoneal Lavage</li><li>Pneumonectomy</li><li>Punch Biopsy</li><li>Radical Hysterectomy</li><li>Right Hemicolectomy</li><li>Salpingectomy</li><li>Salpingo-oophorectomy</li><li>Sigmoid Colectomy</li><li>Simple Hysterectomy</li><li>Simple Mastectomy</li><li>Subtotal Resection</li><li>Supracervical Hysterectomy</li><li>Surgical Resection</li><li>Thoracentesis</li><li>Thoracoscopic Biopsy</li><li>Total Colectomy</li><li>Total Hepatectomy</li><li>Total Mastectomy</li><li>Transplant</li><li>Transurethral resection (TURBT)</li><li>Transverse Colectomy</li><li>Tumor Debulking</li><li>Tumor Resection</li><li>Wedge Resection</li><li>Whipple Procedure</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li><li>Endolaryngeal Excision</li><li>Laryngopharyngectomy</li><li>Radical Maxillectomy</li><li>Transoral Laser Excision</li><li>Lymph Node Dissection</li><li>Mandibulectomy</li><li>Radical Nephrectomy</li><li>Maxillectomy</li><li>Parotidectomy, NOS</li><li>Radical Prostatectomy</li><li>Superficial Parotidectomy</li><li>Palatectomy</li><li>Subtotal Prostatectomy</li><li>Tonsillectomy</li><li>Partial Laryngectomy</li><li>Deep Parotidectomy</li><li>Buccal Mucosal Resection</li><li>Partial Maxillectomy</li><li>Total Nephrectomy</li><li>Vertical Hemilaryngectomy</li><li>Supracricoid Laryngectomy</li><li>Glossectomy</li><li>Supraglottic Laryngectomy</li><li>Total Laryngectomy</li><li>Partial Nephrectomy</li><li>Transurethral Resection (TURP)</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='oct_embedded'>oct_embedded</td>
+                <td class='propCollCol2'>Indicator of whether or not the sample was embedded in Optimal Cutting Temperature (OCT) compound.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432538 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='passage_count'>passage_count</td>
+                <td class='propCollCol2'>Number of passages (splits) between the original tissue and this model.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='pathology_report_uuid'>pathology_report_uuid</td>
+                <td class='propCollCol2'>UUID of the related pathology report.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='preservation_method'>preservation_method</td>
+                <td class='propCollCol2'>Text term that represents the method used to preserve the sample.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Cryopreserved</li><li>FFPE</li><li>Fresh</li><li>OCT</li><li>Snap Frozen</li><li>Frozen</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432521 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='sample_is_ref'>sample_is_ref</td>
+                <td class='propCollCol2'>A biospecimen entity which is used as a reference sample for determining relative protein abundances in labeling experiments.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='sample_ordinal'>sample_ordinal</td>
+                <td class='propCollCol2'>A number describing the samples place in an ordered sequence.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='shortest_dimension'>shortest_dimension</td>
+                <td class='propCollCol2'>Numeric value that represents the shortest dimension of the sample, measured in millimeters.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432603 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='time_between_clamping_and_freezing'>time_between_clamping_and_freezing</td>
+                <td class='propCollCol2'>Numeric representation of the elapsed time between the surgical clamping of blood supply and freezing of the sample, measured in minutes.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432611 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='time_between_excision_and_freezing'>time_between_excision_and_freezing</td>
+                <td class='propCollCol2'>Numeric representation of the elapsed time between the excision and freezing of the sample, measured in minutes.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5432612 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='tissue_collection_type'>tissue_collection_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of collection used to obtain tissue.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Prospective</li><li>Retrospective</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='tumor_code'>tumor_code</td>
+                <td class='propCollCol2'>Diagnostic tumor code of the tissue sample source.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Non cancerous tissue</li><li>Diffuse Large B-Cell Lymphoma (DLBCL)</li><li>Lung Cancer (all types)</li><li>Cervical Cancer (all types)</li><li>Anal Cancer (all types)</li><li>Acute Leukemia of Ambiguous Lineage (ALAL)</li><li>Acute lymphoblastic leukemia (ALL)</li><li>Acute myeloid leukemia (AML)</li><li>Induction Failure AML (AML-IF)</li><li>Neuroblastoma (NBL)</li></ul><ul class='enum-list' style='display:none;'><li>Osteosarcoma (OS)</li><li>Ewing sarcoma</li><li>Wilms tumor (WT)</li><li>Clear cell sarcoma of the kidney (CCSK)</li><li>Rhabdoid tumor (kidney) (RT)</li><li>CNS, ependymoma</li><li>CNS, glioblastoma (GBM)</li><li>CNS, rhabdoid tumor</li><li>CNS, low grade glioma (LGG)</li><li>CNS, medulloblastoma</li><li>CNS, other</li><li>NHL, anaplastic large cell lymphoma</li><li>NHL, Burkitt lymphoma (BL)</li><li>Rhabdomyosarcoma</li><li>Soft tissue sarcoma, non-rhabdomyosarcoma</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='tumor_descriptor'>tumor_descriptor</td>
+                <td class='propCollCol2'>Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Metastatic</li><li>Not Applicable</li><li>Primary</li><li>Recurrence</li><li>Xenograft</li><li>NOS</li><li>Unknown</li><li>Not Reported</li><li>Not Allowed To Collect</li><li>Premalignant</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3288124 - caDSR </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>

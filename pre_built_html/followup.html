@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Follow-Up</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Follow-Up</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>N/A</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>N/A</div>
+                    <a href="#" target='_blank'>(N/A - N/A)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>follow_up_id</li><li>follow_up_submitter_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Case.html">Case</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Follow-Up references the Case it is derived from.</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Diagnosis.html">Diagnosis</a></span></td>
+            <td class='linksCollCol2'>False</td>
+            <td class='linksCollCol3'>Follow-Up references the Diagnosis it is derived from.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='days_to_follow_up'>days_to_follow_up</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date of the patient's last follow-up appointment or contact.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>6154727 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='adverse_event'>adverse_event</td>
+                <td class='propCollCol2'>Text that represents the Common Terminology Criteria for Adverse Events low level term name for an adverse event.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Abdominal Distension</li><li>Abdominal Infection</li><li>Abdominal Pain</li><li>Abdominal Soft Tissue Necrosis</li><li>Abducens Nerve Disorder</li><li>Accessory Nerve Disorder</li><li>Acidosis</li><li>Acoustic Nerve Disorder NOS</li><li>Activated Partial Thromboplastin Time Prolonged</li><li>Acute Coronary Syndrome</li></ul><ul class='enum-list' style='display:none;'><li>Acute Kidney Injury</li><li>Adrenal Insufficiency</li><li>Adult Respiratory Distress Syndrome</li><li>Agitation</li><li>Akathisia</li><li>Alanine Aminotransferase Increased</li><li>Alcohol Intolerance</li><li>Alkaline Phosphatase Increased</li><li>Alkalosis</li><li>Allergic Reaction</li><li>Allergic Rhinitis</li><li>Alopecia</li><li>Amnesia</li><li>Anal Fistula</li><li>Anal Hemorrhage</li><li>Anal Mucositis</li><li>Anal Necrosis</li><li>Anal Pain</li><li>Anal Stenosis</li><li>Anal Ulcer</li><li>Anaphylaxis</li><li>Anemia</li><li>Ankle Fracture</li><li>Anorectal Infection</li><li>Anorexia</li><li>Anorgasmia</li><li>Anxiety</li><li>Aortic Injury</li><li>Aortic Valve Disease</li><li>Aphonia</li><li>Apnea</li><li>Appendicitis</li><li>Appendicitis Perforated</li><li>Arachnoiditis</li><li>Arterial Injury</li><li>Arteritis Infective</li><li>Arthralgia</li><li>Arthritis</li><li>Ascites</li><li>Aspartate Aminotransferase Increased</li><li>Aspiration</li><li>Asystole</li><li>Ataxia</li><li>Atelectasis</li><li>Atrial Fibrillation</li><li>Atrial Flutter</li><li>Atrioventricular Block Complete</li><li>Atrioventricular Block First Degree</li><li>Autoimmune Disorder</li><li>Avascular Necrosis</li><li>Azoospermia</li><li>Back Pain</li><li>Bile Duct Stenosis</li><li>Biliary Anastomotic Leak</li><li>Biliary Fistula</li><li>Biliary Tract Infection</li><li>Bladder Anastomotic Leak</li><li>Bladder Infection</li><li>Bladder Perforation</li><li>Bladder Spasm</li><li>Bloating</li><li>Blood and Lymphatic System Disorders - Other</li><li>Blood Antidiuretic Hormone Abnormal</li><li>Blood Bilirubin Increased</li><li>Blood Corticotrophin Decreased</li><li>Blood Gonadotrophin Abnormal</li><li>Blood Prolactin Abnormal</li><li>Blurred Vision</li><li>Body Odor</li><li>Bone Infection</li><li>Bone Marrow Hypocellular</li><li>Bone Pain</li><li>Brachial Plexopathy</li><li>Breast Atrophy</li><li>Breast Infection</li><li>Breast Pain</li><li>Bronchial Fistula</li><li>Bronchial Infection</li><li>Bronchial Obstruction</li><li>Bronchial Stricture</li><li>Bronchopleural Fistula</li><li>Bronchopulmonary Hemorrhage</li><li>Bronchospasm</li><li>Bruising</li><li>Bullous Dermatitis</li><li>Burn</li><li>Buttock Pain</li><li>Capillary Leak Syndrome</li><li>Carbon Monoxide Diffusing Capacity Decreased</li><li>Cardiac Arrest</li><li>Cardiac Disorders - Other</li><li>Cardiac Troponin I Increased</li><li>Cardiac Troponin T Increased</li><li>Cataract</li><li>Catheter Related Infection</li><li>CD4 Lymphocytes Decreased</li><li>Cecal Hemorrhage</li><li>Cecal Infection</li><li>Central Nervous System Necrosis</li><li>Cerebrospinal Fluid Leakage</li><li>Cervicitis Infection</li><li>Cheilitis</li><li>Chest Pain - Cardiac</li><li>Chest Wall Pain</li><li>Chills</li><li>Cholecystitis</li><li>Cholesterol High</li><li>Chronic Kidney Disease</li><li>Chylothorax</li><li>Cognitive Disturbance</li><li>Colitis</li><li>Colonic Fistula</li><li>Colonic Hemorrhage</li><li>Colonic Obstruction</li><li>Colonic Perforation</li><li>Colonic Stenosis</li><li>Colonic Ulcer</li><li>Concentration Impairment</li><li>Conduction Disorder</li><li>Confusion</li><li>Congenital, Familial and Genetic Disorders - Other</li><li>Conjunctivitis</li><li>Conjunctivitis Infective</li><li>Constipation</li><li>Constrictive Pericarditis</li><li>Corneal Infection</li><li>Corneal Ulcer</li><li>Cough</li><li>CPK Increased</li><li>Cranial Nerve Infection</li><li>Creatinine Increased</li><li>Cushingoid</li><li>Cystitis Noninfective</li><li>Cytokine Release Syndrome</li><li>Death Neonatal</li><li>Death NOS</li><li>Dehydration</li><li>Delayed Orgasm</li><li>Delayed Puberty</li><li>Delirium</li><li>Delusions</li><li>Dental Caries</li><li>Depressed Level of Consciousness</li><li>Depression</li><li>Dermatitis Radiation</li><li>Device Related Infection</li><li>Diarrhea</li><li>Disseminated Intravascular Coagulation</li><li>Dizziness</li><li>Dry Eye</li><li>Dry Mouth</li><li>Dry Skin</li><li>Duodenal Fistula</li><li>Duodenal Hemorrhage</li><li>Duodenal Infection</li><li>Duodenal Obstruction</li><li>Duodenal Perforation</li><li>Duodenal Stenosis</li><li>Duodenal Ulcer</li><li>Dysarthria</li><li>Dysesthesia</li><li>Dysgeusia</li><li>Dysmenorrhea</li><li>Dyspareunia</li><li>Dyspepsia</li><li>Dysphagia</li><li>Dysphasia</li><li>Dyspnea</li><li>Ear and Labyrinth Disorders - Other</li><li>Ear Pain</li><li>Edema Cerebral</li><li>Edema Face</li><li>Edema Limbs</li><li>Edema Trunk</li><li>Ejaculation Disorder</li><li>Ejection Fraction Decreased</li><li>Electrocardiogram QT Corrected Interval Prolonged</li><li>Encephalitis Infection</li><li>Encephalomyelitis Infection</li><li>Encephalopathy</li><li>Endocarditis Infective</li><li>Endocrine Disorders - Other</li><li>Endophthalmitis</li><li>Enterocolitis</li><li>Enterocolitis Infectious</li><li>Enterovesical Fistula</li><li>Epistaxis</li><li>Erectile Dysfunction</li><li>Erythema Multiforme</li><li>Erythroderma</li><li>Esophageal Anastomotic Leak</li><li>Esophageal Fistula</li><li>Esophageal Hemorrhage</li><li>Esophageal Infection</li><li>Esophageal Necrosis</li><li>Esophageal Obstruction</li><li>Esophageal Pain</li><li>Esophageal Perforation</li><li>Esophageal Stenosis</li><li>Esophageal Ulcer</li><li>Esophageal Varices Hemorrhage</li><li>Esophagitis</li><li>Euphoria</li><li>Exostosis</li><li>External Ear Inflammation</li><li>External Ear Pain</li><li>Extraocular Muscle Paresis</li><li>Extrapyramidal Disorder</li><li>Eye Disorders - Other</li><li>Eye Infection</li><li>Eye Pain</li><li>Eyelid Function Disorder</li><li>Facial Muscle Weakness</li><li>Facial Nerve Disorder</li><li>Facial Pain</li><li>Fall</li><li>Fallopian Tube Anastomotic Leak</li><li>Fallopian Tube Obstruction</li><li>Fallopian Tube Perforation</li><li>Fallopian Tube Stenosis</li><li>Fat Atrophy</li><li>Fatigue</li><li>Febrile Neutropenia</li><li>Fecal Incontinence</li><li>Female Genital Tract Fistula</li><li>Feminization Acquired</li><li>Fetal Death</li><li>Fetal Growth Retardation</li><li>Fever</li><li>Fibrinogen Decreased</li><li>Fibrosis Deep Connective Tissue</li><li>Flank Pain</li><li>Flashing Lights</li><li>Flatulence</li><li>Floaters</li><li>Flu Like Symptoms</li><li>Flushing</li><li>Forced Expiratory Volume Decreased</li><li>Fracture</li><li>Gait Disturbance</li><li>Gallbladder Fistula</li><li>Gallbladder Infection</li><li>Gallbladder Necrosis</li><li>Gallbladder Obstruction</li><li>Gallbladder Pain</li><li>Gallbladder Perforation</li><li>Gastric Anastomotic Leak</li><li>Gastric Fistula</li><li>Gastric Hemorrhage</li><li>Gastric Necrosis</li><li>Gastric Perforation</li><li>Gastric Stenosis</li><li>Gastric Ulcer</li><li>Gastritis</li><li>Gastroesophageal Reflux Disease</li><li>Gastrointestinal Anastomotic Leak</li><li>Gastrointestinal Disorders - Other</li><li>Gastrointestinal Fistula</li><li>Gastrointestinal Pain</li><li>Gastrointestinal Stoma Necrosis</li><li>Gastroparesis</li><li>General Disorders and Administration Site Conditions - Other</li><li>Generalized Muscle Weakness</li><li>Genital Edema</li><li>GGT Increased</li><li>Gingival Pain</li><li>Glaucoma</li><li>Glossopharyngeal Nerve Disorder</li><li>Glucose Intolerance</li><li>Growth Accelerated</li><li>Growth Hormone Abnormal</li><li>Growth Suppression</li><li>Gum Infection</li><li>Gynecomastia</li><li>Hallucinations</li><li>Haptoglobin Decreased</li><li>Head Soft Tissue Necrosis</li><li>Headache</li><li>Hearing Impaired</li><li>Heart Failure</li><li>Hematoma</li><li>Hematosalpinx</li><li>Hematuria</li><li>Hemoglobin Increased</li><li>Hemoglobinuria</li><li>Hemolysis</li><li>Hemolytic Uremic Syndrome</li><li>Hemorrhoidal Hemorrhage</li><li>Hemorrhoids</li><li>Hepatic Failure</li><li>Hepatic Hemorrhage</li><li>Hepatic Infection</li><li>Hepatic Necrosis</li><li>Hepatic Pain</li><li>Hepatitis Viral</li><li>Hepatobiliary Disorders - Other</li><li>Hiccups</li><li>Hip Fracture</li><li>Hirsutism</li><li>Hoarseness</li><li>Hot Flashes</li><li>Hydrocephalus</li><li>Hypercalcemia</li><li>Hyperglycemia</li><li>Hyperhidrosis</li><li>Hyperkalemia</li><li>Hypermagnesemia</li><li>Hypernatremia</li><li>Hyperparathyroidism</li><li>Hypersomnia</li><li>Hypertension</li><li>Hyperthyroidism</li><li>Hypertrichosis</li><li>Hypertriglyceridemia</li><li>Hyperuricemia</li><li>Hypoalbuminemia</li><li>Hypocalcemia</li><li>Hypoglossal Nerve Disorder</li><li>Hypoglycemia</li><li>Hypohidrosis</li><li>Hypokalemia</li><li>Hypomagnesemia</li><li>Hyponatremia</li><li>Hypoparathyroidism</li><li>Hypophosphatemia</li><li>Hypotension</li><li>Hypothermia</li><li>Hypothyroidism</li><li>Hypoxia</li><li>Ileal Fistula</li><li>Ileal Hemorrhage</li><li>Ileal Obstruction</li><li>Ileal Perforation</li><li>Ileal Stenosis</li><li>Ileal Ulcer</li><li>Ileus</li><li>Immune System Disorders - Other</li><li>Infections and Infestations - Other</li><li>Infective Myositis</li><li>Infusion Related Reaction</li><li>Infusion Site Extravasation</li><li>Injection Site Reaction</li><li>Injury to Carotid Artery</li><li>Injury to Inferior Vena Cava</li><li>Injury to Jugular Vein</li><li>Injury to Superior Vena Cava</li><li>Injury, Poisoning and Procedural Complications - Other</li><li>INR Increased</li><li>Insomnia</li><li>Intestinal Stoma Leak</li><li>Intestinal Stoma Obstruction</li><li>Intestinal Stoma Site Bleeding</li><li>Intra-Abdominal Hemorrhage</li><li>Intracranial Hemorrhage</li><li>Intraoperative Arterial Injury</li><li>Intraoperative Breast Injury</li><li>Intraoperative Cardiac Injury</li><li>Intraoperative Ear Injury</li><li>Intraoperative Endocrine Injury</li><li>Intraoperative Gastrointestinal Injury</li><li>Intraoperative Head and Neck Injury</li><li>Intraoperative Hemorrhage</li><li>Intraoperative Hepatobiliary Injury</li><li>Intraoperative Musculoskeletal Injury</li><li>Intraoperative Neurological Injury</li><li>Intraoperative Ocular Injury</li><li>Intraoperative Renal Injury</li><li>Intraoperative Reproductive Tract Injury</li><li>Intraoperative Respiratory Injury</li><li>Intraoperative Skin Injury</li><li>Intraoperative Splenic Injury</li><li>Intraoperative Urinary Injury</li><li>Intraoperative Venous Injury</li><li>Investigations - Other</li><li>Iron Overload</li><li>Irregular Menstruation</li><li>Irritability</li><li>Ischemia Cerebrovascular</li><li>IVth Nerve Disorder</li><li>Jejunal Fistula</li><li>Jejunal Hemorrhage</li><li>Jejunal Obstruction</li><li>Jejunal Perforation</li><li>Jejunal Stenosis</li><li>Jejunal Ulcer</li><li>Joint Effusion</li><li>Joint Infection</li><li>Joint Range of Motion Decreased</li><li>Joint Range of Motion Decreased Cervical Spine</li><li>Joint Range of Motion Decreased Lumbar Spine</li><li>Keratitis</li><li>Kidney Anastomotic Leak</li><li>Kidney Infection</li><li>Kyphosis</li><li>Lactation Disorder</li><li>Large Intestinal Anastomotic Leak</li><li>Laryngeal Edema</li><li>Laryngeal Fistula</li><li>Laryngeal Hemorrhage</li><li>Laryngeal Inflammation</li><li>Laryngeal Mucositis</li><li>Laryngeal Obstruction</li><li>Laryngeal Stenosis</li><li>Laryngitis</li><li>Laryngopharyngeal Dysesthesia</li><li>Laryngospasm</li><li>Left Ventricular Systolic Dysfunction</li><li>Lethargy</li><li>Leukemia Secondary to Oncology Chemotherapy</li><li>Leukocytosis</li><li>Leukoencephalopathy</li><li>Libido Decreased</li><li>Libido Increased</li><li>Lip Infection</li><li>Lip Pain</li><li>Lipase Increased</li><li>Lipohypertrophy</li><li>Localized Edema</li><li>Lordosis</li><li>Lower Gastrointestinal Hemorrhage</li><li>Lung Infection</li><li>Lymph Gland Infection</li><li>Lymph Leakage</li><li>Lymph Node Pain</li><li>Lymphedema</li><li>Lymphocele</li><li>Lymphocyte Count Decreased</li><li>Lymphocyte Count Increased</li><li>Malabsorption</li><li>Malaise</li><li>Mania</li><li>Mediastinal Hemorrhage</li><li>Mediastinal Infection</li><li>Memory Impairment</li><li>Meningismus</li><li>Meningitis</li><li>Menopause</li><li>Menorrhagia</li><li>Metabolism and Nutrition Disorders - Other</li><li>Middle Ear Inflammation</li><li>Mitral Valve Disease</li><li>Mobitz (Type) II Atrioventricular Block</li><li>Mobitz Type I</li><li>Movements Involuntary</li><li>Mucosal Infection</li><li>Mucositis Oral</li><li>Multi-Organ Failure</li><li>Muscle Weakness Left-Sided</li><li>Muscle Weakness Lower Limb</li><li>Muscle Weakness Right-Sided</li><li>Muscle Weakness Trunk</li><li>Muscle Weakness Upper Limb</li><li>Musculoskeletal and Connective Tissue Disorders - Other</li><li>Musculoskeletal Deformity</li><li>Myalgia</li><li>Myelitis</li><li>Myelodysplastic Syndrome</li><li>Myocardial Infarction</li><li>Myocarditis</li><li>Myositis</li><li>Nail Discoloration</li><li>Nail Infection</li><li>Nail Loss</li><li>Nail Ridging</li><li>Nasal Congestion</li><li>Nausea</li><li>Neck Edema</li><li>Neck Pain</li><li>Neck Soft Tissue Necrosis</li><li>Neoplasms Benign, Malignant and Unspecified (Incl Cysts and Polyps) - Other</li><li>Nervous System Disorders - Other</li><li>Neuralgia</li><li>Neutrophil Count Decreased</li><li>Night Blindness</li><li>Nipple Deformity</li><li>Non-Cardiac Chest Pain</li><li>Nystagmus</li><li>Obesity</li><li>Obstruction Gastric</li><li>Oculomotor Nerve Disorder</li><li>Olfactory Nerve Disorder</li><li>Oligospermia</li><li>Optic Nerve Disorder</li><li>Oral Cavity Fistula</li><li>Oral Dysesthesia</li><li>Oral Hemorrhage</li><li>Oral Pain</li><li>Osteonecrosis of Jaw</li><li>Osteoporosis</li><li>Otitis Externa</li><li>Otitis Media</li><li>Ovarian Hemorrhage</li><li>Ovarian Infection</li><li>Ovarian Rupture</li><li>Ovulation Pain</li><li>Pain</li><li>Pain in Extremity</li><li>Pain of Skin</li><li>Palmar-Plantar Erythrodysesthesia Syndrome</li><li>Palpitations</li><li>Pancreas Infection</li><li>Pancreatic Anastomotic Leak</li><li>Pancreatic Duct Stenosis</li><li>Pancreatic Enzymes Decreased</li><li>Pancreatic Fistula</li><li>Pancreatic Hemorrhage</li><li>Pancreatic Necrosis</li><li>Pancreatitis</li><li>Papilledema</li><li>Papulopustular Rash</li><li>Paresthesia</li><li>Paronychia</li><li>Paroxysmal Atrial Tachycardia</li><li>Pelvic Floor Muscle Weakness</li><li>Pelvic Infection</li><li>Pelvic Pain</li><li>Pelvic Soft Tissue Necrosis</li><li>Penile Infection</li><li>Penile Pain</li><li>Perforation Bile Duct</li><li>Pericardial Effusion</li><li>Pericardial Tamponade</li><li>Pericarditis</li><li>Perineal Pain</li><li>Periodontal Disease</li><li>Periorbital Edema</li><li>Periorbital Infection</li><li>Peripheral Ischemia</li><li>Peripheral Motor Neuropathy</li><li>Peripheral Nerve Infection</li><li>Peripheral Sensory Neuropathy</li><li>Peritoneal Infection</li><li>Peritoneal Necrosis</li><li>Personality Change</li><li>Phantom Pain</li><li>Pharyngeal Anastomotic Leak</li><li>Pharyngeal Fistula</li><li>Pharyngeal Hemorrhage</li><li>Pharyngeal Mucositis</li><li>Pharyngeal Necrosis</li><li>Pharyngeal Stenosis</li><li>Pharyngitis</li><li>Pharyngolaryngeal Pain</li><li>Phlebitis</li><li>Phlebitis Infective</li><li>Photophobia</li><li>Photosensitivity</li><li>Platelet Count Decreased</li><li>Pleural Effusion</li><li>Pleural Hemorrhage</li><li>Pleural Infection</li><li>Pleuritic Pain</li><li>Pneumonitis</li><li>Pneumothorax</li><li>Portal Hypertension</li><li>Portal Vein Thrombosis</li><li>Postnasal Drip</li><li>Postoperative Hemorrhage</li><li>Postoperative Thoracic Procedure Complication</li><li>Precocious Puberty</li><li>Pregnancy, Puerperium and Perinatal Conditions - Other</li><li>Premature Delivery</li><li>Premature Menopause</li><li>Presyncope</li><li>Proctitis</li><li>Productive Cough</li><li>Prolapse of Intestinal Stoma</li><li>Prolapse of Urostomy</li><li>Prostate Infection</li><li>Prostatic Hemorrhage</li><li>Prostatic Obstruction</li><li>Prostatic Pain</li><li>Proteinuria</li><li>Pruritus</li><li>Psychiatric Disorders - Other</li><li>Psychosis</li><li>Pulmonary Edema</li><li>Pulmonary Fibrosis</li><li>Pulmonary Fistula</li><li>Pulmonary Hypertension</li><li>Pulmonary Valve Disease</li><li>Purpura</li><li>Pyramidal Tract Syndrome</li><li>Radiation Recall Reaction (Dermatologic)</li><li>Radiculitis</li><li>Rash Acneiform</li><li>Rash Maculo-Papular</li><li>Rash Pustular</li><li>Rectal Anastomotic Leak</li><li>Rectal Fistula</li><li>Rectal Hemorrhage</li><li>Rectal Mucositis</li><li>Rectal Necrosis</li><li>Rectal Obstruction</li><li>Rectal Pain</li><li>Rectal Perforation</li><li>Rectal Stenosis</li><li>Rectal Ulcer</li><li>Recurrent Laryngeal Nerve Palsy</li><li>Renal and Urinary Disorders - Other</li><li>Renal Calculi</li><li>Renal Colic</li><li>Renal Hemorrhage</li><li>Reproductive System and Breast Disorders - Other</li><li>Respiratory Failure</li><li>Respiratory, Thoracic and Mediastinal Disorders - Other</li><li>Restlessness</li><li>Restrictive Cardiomyopathy</li><li>Retinal Detachment</li><li>Retinal Tear</li><li>Retinal Vascular Disorder</li><li>Retinoic Acid Syndrome</li><li>Retinopathy</li><li>Retroperitoneal Hemorrhage</li><li>Reversible Posterior Leukoencephalopathy Syndrome</li><li>Rhinitis Infective</li><li>Right Ventricular Dysfunction</li><li>Salivary Duct Inflammation</li><li>Salivary Gland Fistula</li><li>Salivary Gland Infection</li><li>Scalp Pain</li><li>Scleral Disorder</li><li>Scoliosis</li><li>Scrotal Infection</li><li>Scrotal Pain</li><li>Seizure</li><li>Sepsis</li><li>Seroma</li><li>Serum Amylase Increased</li><li>Serum Sickness</li><li>Sick Sinus Syndrome</li><li>Sinus Bradycardia</li><li>Sinus Disorder</li><li>Sinus Pain</li><li>Sinus Tachycardia</li><li>Sinusitis</li><li>Skin and Subcutaneous Tissue Disorders - Other</li><li>Skin Atrophy</li><li>Skin Hyperpigmentation</li><li>Skin Hypopigmentation</li><li>Skin Induration</li><li>Skin Infection</li><li>Skin Ulceration</li><li>Sleep Apnea</li><li>Small Intestinal Anastomotic Leak</li><li>Small Intestinal Mucositis</li><li>Small Intestinal Obstruction</li><li>Small Intestinal Perforation</li><li>Small Intestinal Stenosis</li><li>Small Intestine Infection</li><li>Small Intestine Ulcer</li><li>Sneezing</li><li>Social Circumstances - Other</li><li>Soft Tissue Infection</li><li>Soft Tissue Necrosis Lower Limb</li><li>Soft Tissue Necrosis Upper Limb</li><li>Somnolence</li><li>Sore Throat</li><li>Spasticity</li><li>Spermatic Cord Anastomotic Leak</li><li>Spermatic Cord Hemorrhage</li><li>Spermatic Cord Obstruction</li><li>Spinal Fracture</li><li>Spleen Disorder</li><li>Splenic Infection</li><li>Stenosis of Gastrointestinal Stoma</li><li>Stevens-Johnson Syndrome</li><li>Stoma Site Infection</li><li>Stomach Pain</li><li>Stomal Ulcer</li><li>Stridor</li><li>Stroke</li><li>Sudden Death NOS</li><li>Suicidal Ideation</li><li>Suicide Attempt</li><li>Superficial Soft Tissue Fibrosis</li><li>Superficial Thrombophlebitis</li><li>Superior Vena Cava Syndrome</li><li>Supraventricular Tachycardia</li><li>Surgical and Medical Procedures - Other</li><li>Syncope</li><li>Telangiectasia</li><li>Testicular Disorder</li><li>Testicular Hemorrhage</li><li>Testicular Pain</li><li>Thromboembolic Event</li><li>Thrombotic Thrombocytopenic Purpura</li><li>Tinnitus</li><li>Tooth Development Disorder</li><li>Tooth Discoloration</li><li>Tooth Infection</li><li>Toothache</li><li>Toxic Epidermal Necrolysis</li><li>Tracheal Fistula</li><li>Tracheal Hemorrhage</li><li>Tracheal Mucositis</li><li>Tracheal Obstruction</li><li>Tracheal Stenosis</li><li>Tracheitis</li><li>Tracheostomy Site Bleeding</li><li>Transient Ischemic Attacks</li><li>Treatment Related Secondary Malignancy</li><li>Tremor</li><li>Tricuspid Valve Disease</li><li>Trigeminal Nerve Disorder</li><li>Trismus</li><li>Tumor Lysis Syndrome</li><li>Tumor Pain</li><li>Typhlitis</li><li>Unequal Limb Length</li><li>Unintended Pregnancy</li><li>Upper Gastrointestinal Hemorrhage</li><li>Upper Respiratory Infection</li><li>Ureteric Anastomotic Leak</li><li>Urethral Anastomotic Leak</li><li>Urethral Infection</li><li>Urinary Fistula</li><li>Urinary Frequency</li><li>Urinary Incontinence</li><li>Urinary Retention</li><li>Urinary Tract Infection</li><li>Urinary Tract Obstruction</li><li>Urinary Tract Pain</li><li>Urinary Urgency</li><li>Urine Discoloration</li><li>Urine Output Decreased</li><li>Urostomy Leak</li><li>Urostomy Obstruction</li><li>Urostomy Site Bleeding</li><li>Urostomy Stenosis</li><li>Urticaria</li><li>Uterine Anastomotic Leak</li><li>Uterine Fistula</li><li>Uterine Hemorrhage</li><li>Uterine Infection</li><li>Uterine Obstruction</li><li>Uterine Pain</li><li>Uterine Perforation</li><li>Uveitis</li><li>Vaginal Anastomotic Leak</li><li>Vaginal Discharge</li><li>Vaginal Dryness</li><li>Vaginal Fistula</li><li>Vaginal Hemorrhage</li><li>Vaginal Infection</li><li>Vaginal Inflammation</li><li>Vaginal Obstruction</li><li>Vaginal Pain</li><li>Vaginal Perforation</li><li>Vaginal Stricture</li><li>Vaginismus</li><li>Vagus Nerve Disorder</li><li>Vas Deferens Anastomotic Leak</li><li>Vascular Access Complication</li><li>Vascular Disorders - Other</li><li>Vasculitis</li><li>Vasovagal Reaction</li><li>Venous Injury</li><li>Ventricular Arrhythmia</li><li>Ventricular Fibrillation</li><li>Ventricular Tachycardia</li><li>Vertigo</li><li>Vestibular Disorder</li><li>Virilization</li><li>Visceral Arterial Ischemia</li><li>Vital Capacity Abnormal</li><li>Vitreous Hemorrhage</li><li>Voice Alteration</li><li>Vomiting</li><li>Vulval Infection</li><li>Watering Eyes</li><li>Weight Gain</li><li>Weight Loss</li><li>Wheezing</li><li>White Blood Cell Decreased</li><li>Wolff-Parkinson-White Syndrome</li><li>Wound Complication</li><li>Wound Dehiscence</li><li>Wound Infection</li><li>Wrist Fracture</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3125302 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='adverse_event_grade'>adverse_event_grade</td>
+                <td class='propCollCol2'>The text term used to describe a specific histone variants, which are proteins that substitute for the core canonical histones.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Grade 1</li><li>Grade 2</li><li>Grade 3</li><li>Grade 4</li><li>Grade 5</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2944515 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='aids_risk_factors'>aids_risk_factors</td>
+                <td class='propCollCol2'>The text term used to describe a risk factor of  the acquired immunodeficiency syndrome (AIDS) that the patient either had at time time of the study or experienced in the past.</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Candidiasis</li><li>Coccidioidomycosis</li><li>Cryptococcosis</li><li>Cryptosporidiosis, Chronic Intestinal</li><li>Cytomegalovirus</li><li>Encephalopathy</li><li>Herpes Simplex Virus</li><li>Histoplasmosis</li><li>Isosporiasis</li><li>Mycobacterium avium Complex</li></ul><ul class='enum-list' style='display:none;'><li>Mycobacterium tuberculosis</li><li>Mycobacterium, NOS</li><li>Nocardiosis</li><li>Pneumocystis Pneumonia</li><li>Pneumonia, NOS</li><li>Progressive Multifocal Leukoencephalopathy</li><li>Salmonella Septicemia</li><li>Toxoplasmosis</li><li>Wasting Syndrome</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='barretts_esophagus_goblet_cells_present'>barretts_esophagus_goblet_cells_present</td>
+                <td class='propCollCol2'>The yes/no/unknown indicator used to describe whether goblet cells were determined to be present in a patient diagnosed with Barrett's esophagus.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3440216 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='bmi'>bmi</td>
+                <td class='propCollCol2'>A calculated numerical quantity that represents an individual's weight to height ratio.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2006410 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='body_surface_area'>body_surface_area</td>
+                <td class='propCollCol2'>Numeric value used to represent the 2-dimensional extent of the body surface relating height to weight.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>653 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='cause_of_response'>cause_of_response</td>
+                <td class='propCollCol2'>The text term used to describe the suspected cause or reason for the patient disease response.
+</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6161025 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='cd4_count'>cd4_count</td>
+                <td class='propCollCol2'>The text term used to describe the outcome of the procedure to determine the amount of the CD4 expressing cells in a sample.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>4182751 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='cdc_hiv_risk_factors'>cdc_hiv_risk_factors</td>
+                <td class='propCollCol2'>The text term used to describe a risk factor for human immunodeficiency virus, as described by the Center for Disease Control.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Hemophiliac</li><li>Heterosexual Contact</li><li>Homosexual Contact</li><li>Intravenous Drug User</li><li>None</li><li>Transfusion Recipient</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='comorbidity'>comorbidity</td>
+                <td class='propCollCol2'>The text term used to describe a comorbidity disease, which coexists with the patient's malignant disease.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Acute Renal Failure</li><li>Adenocarcinoma</li><li>Adrenocortical Insufficiency</li><li>Adenomatous Polyposis Coli</li><li>Allergies</li><li>Alpha-1 Antitrypsin</li><li>Anemia</li><li>Anxiety</li><li>Arrhythmia</li><li>Arthritis</li></ul><ul class='enum-list' style='display:none;'><li>Asthma</li><li>Atrial Fibrillation</li><li>Avascular Necrosis</li><li>Barrett's Esophagus</li><li>Basal Cell Carcinoma</li><li>Beckwith-Wiedemann</li><li>Behcet's Disease</li><li>Biliary Disorder</li><li>Blood Clots</li><li>Bone Fracture(s)</li><li>Bronchitis</li><li>Calcium Channel Blockers</li><li>Cancer</li><li>Cataracts</li><li>Celiac Disease</li><li>Cirrhosis, Unknown Etiology</li><li>Cerebrovascular Disease</li><li>Cholelithiasis</li><li>Chronic Renal Failure</li><li>Colon Polyps</li><li>Common Variable Immunodeficiency</li><li>Congestive Heart Failure (CHF)</li><li>Connective Tissue Disorder</li><li>COPD</li><li>Coronary Artery Disease</li><li>Crohn's Disease</li><li>Cryptogenic Organizing Pneumonia</li><li>Deep Vein Thrombosis / Thromboembolism</li><li>Denys-Drash Syndrome</li><li>Depression</li><li>Diabetes</li><li>Diabetes, Type II</li><li>Diabetic Neuropathy</li><li>Diet Controlled Diabetes</li><li>Diverticulitis</li><li>DVT/PE</li><li>Dyslipidemia</li><li>Epilepsy</li><li>Eczema</li><li>Epstein-Barr Virus</li><li>Familial Adenomatous Polyposis</li><li>Fanconi Anemia</li><li>Fibrosis</li><li>Gastroesophageal Reflux Disease</li><li>GERD</li><li>Glaucoma</li><li>Glycogen Storage Disease</li><li>Gout</li><li>Gonadal Dysfunction</li><li>Gorlin Syndrome</li><li>H. pylori Infection</li><li>Hashimoto's Thyroiditis</li><li>Headache</li><li>Heart Disease</li><li>Hemihypertrophy</li><li>Hemorrhagic Cystitis</li><li>Hepatitis</li><li>Hepatitis A Infection</li><li>Hepatitis B Infection</li><li>Hepatitis C Infection</li><li>Hepatitis, Chronic</li><li>Hereditary Non-polyposis Colon Cancer</li><li>Herpes</li><li>High Grade Liver Dysplastic Nodule</li><li>HIV / AIDS</li><li>Human Papillomavirus Infection</li><li>HUS/TTP</li><li>Hypercholesterolemia</li><li>Hypercalcemia</li><li>Hyperglycemia</li><li>Hyperlipidemia</li><li>Hypertension</li><li>Hypospadias</li><li>Hypothyroidism</li><li>Inflammatory Bowel Disease</li><li>Insulin Controlled Diabetes</li><li>Interstitial Pneumontis or ARDS</li><li>Intraductal Papillary Mucinous Neoplasm</li><li>Iron Overload</li><li>Ischemic Heart Disease</li><li>ITP</li><li>Joint Replacement</li><li>Kidney Disease</li><li>Liver Cirrhosis (Liver Disease)</li><li>Liver Toxicity (Non-Infectious)</li><li>Li-Fraumeni Syndrome</li><li>Low Grade Liver Dysplastic Nodule</li><li>Lupus</li><li>Lynch Syndrome</li><li>MAI</li><li>Myasthenia Gravis</li><li>Myocardial Infarction</li><li>Neuroendocrine Tumor</li><li>Nonalcoholic Steatohepatitis</li><li>Obesity</li><li>Organ transplant (site)</li><li>Osteoarthritis</li><li>Osteoporosis or Osteopenia</li><li>Other</li><li>Other Cancer Within 5 Years</li><li>Other Nonmalignant Systemic Disease</li><li>Other Pulmonary Complications</li><li>Pancreatitis</li><li>Pain (Various)</li><li>Peptic Ulcer (Ulcer)</li><li>Peripheral Neuropathy</li><li>Peripheral Vascular Disease</li><li>Peutz-Jeghers Disease</li><li>Pregnancy in Patient or Partner</li><li>Primary Sclerosing Cholangitis</li><li>Psoriasis</li><li>Pulmonary Fibrosis</li><li>Pulmonary Hemorrhage</li><li>Renal Failure (Requiring Dialysis)</li><li>Renal Dialysis</li><li>Renal Insufficiency</li><li>Rheumatologic Disease</li><li>Rheumatoid Arthritis</li><li>Rubinstein-Taybi Syndrome</li><li>Sarcoidosis</li><li>Seizure</li><li>Sleep apnea</li><li>Smoking</li><li>Steatosis</li><li>Stroke</li><li>Transient Ischemic Attack</li><li>Tuberculosis</li><li>Turcot Syndrome</li><li>Tyrosinemia</li><li>Ulcerative Colitis</li><li>Wagr Syndrome</li><li>Unknown</li><li>Not Reported</li><li>Chlamydia</li><li>Varicella Zoster Virus</li><li>Chronic Systemic Steroid Use</li><li>Herpes Zoster</li><li>Clonal Hematopoiesis</li><li>Syphilis</li><li>Autoimmune Lymphoproliferative Syndrome (ALPS)</li><li>Dermatomyosis</li><li>Gastritis</li><li>Polycystic Ovarian Syndrome (PCOS)</li><li>Abnormal Glucose Level</li><li>Sjogren's Syndrome</li><li>Metabolic Syndrome</li><li>Lymphocytic Meningitis</li><li>Cytomegalovirus (CMV)</li><li>Ataxia-telangiectasia</li><li>Staphylococcus aureus</li><li>Malaria</li><li>Cryptococcal Meningitis</li><li>Chronic Fatigue Syndrome</li><li>Treponema pallidum</li><li>Mycobacterium avium Complex</li><li>Bacteroides fragilis</li><li>Pneumocystis Pneumonia</li><li>Shingles</li><li>Fibromyalgia</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2970715 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='comorbidity_method_of_diagnosis'>comorbidity_method_of_diagnosis</td>
+                <td class='propCollCol2'>The text term used to describe the method used to diagnose the patient's comorbidity disease.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Histology</li><li>Pathology</li><li>Radiology</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6142386 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_adverse_event'>days_to_adverse_event</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date of the patient's adverse event.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154728 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_comorbidity'>days_to_comorbidity</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date the patient was diagnosed with a comorbidity.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154729 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_imaging'>days_to_imaging</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date the imaging or scan was performed on the patient.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_progression'>days_to_progression</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date the patient's disease progressed.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154730 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_progression_free'>days_to_progression_free</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date the patient's disease was formally confirmed as progression-free.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='days_to_recurrence'>days_to_recurrence</td>
+                <td class='propCollCol2'>Number of days between the date used for index and the date the patient's disease recurred.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6154731 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='diabetes_treatment_type'>diabetes_treatment_type</td>
+                <td class='propCollCol2'>Text term used to describe the types of treatment used to manage diabetes.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Alpha-Glucosidase Inhibitor</li><li>Biguanide</li><li>Diet</li><li>Injected Insulin</li><li>Insulin</li><li>Oral Hypoglycemic</li><li>Sulfonylurea</li><li>Thiazolidinedione</li><li>Other</li><li>Unknown</li></ul><ul class='enum-list' style='display:none;'><li>Not Reported</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3587247 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='disease_response'>disease_response</td>
+                <td class='propCollCol2'>Code assigned to describe the patient's response or outcome to the disease.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>AJ-Adjuvant Therapy</li><li>BED-Biochemical Evidence of Disease</li><li>CPD-Clinical Progression</li><li>CR-Complete Response</li><li>CRU-Complete Response Unconfirmed</li><li>DU-Disease Unchanged</li><li>IMR-Immunoresponse</li><li>IPD-Immunoprogression</li><li>MR-Minimal/Marginal response</li><li>MX-Mixed Response</li></ul><ul class='enum-list' style='display:none;'><li>Non-CR/Non-PD-Non-CR/Non-PD</li><li>NPB-No Palliative Benefit</li><li>NR-No Response</li><li>PA-Palliative Therapy</li><li>PB-Palliative Benefit</li><li>PD-Progressive Disease</li><li>PDM-Persistent Distant Metastasis</li><li>PLD-Persistent Locoregional Disease</li><li>PPD-Pseudoprogression</li><li>PR-Partial Response</li><li>PSR-Pseudoresponse</li><li>RD-Responsive Disease</li><li>RP-Response</li><li>RPD-Radiographic Progressive Disease</li><li>sCR-Stringent Complete Response</li><li>SD-Stable Disease</li><li>SPD-Surgical Progression</li><li>TE-Too Early</li><li>TF-Tumor Free</li><li>VGPR-Very Good Partial Response</li><li>WT-With Tumor</li><li>Unknown</li><li>Not Reported</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5750671 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='dlco_ref_predictive_percent'>dlco_ref_predictive_percent</td>
+                <td class='propCollCol2'>The value, as a percentage of predicted lung volume, measuring the amount of carbon monoxide detected in a patient's lungs.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2180255 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='ecog_performance_status'>ecog_performance_status</td>
+                <td class='propCollCol2'>The ECOG functional performance status of the patient/participant.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>88 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='evidence_of_recurrence_type'>evidence_of_recurrence_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of evidence used to determine whether the patient's disease recurred.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Biopsy with Histologic Confirmation</li><li>Convincing Image Source</li><li>Physical Examination</li><li>Positive Biomarker(s)</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='eye_color'>eye_color</td>
+                <td class='propCollCol2'>The color of the iris of the eye</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Amber</li><li>Blue</li><li>Brown</li><li>Gray</li><li>Green</li><li>Hazel</li><li>Red & Violet</li><li>Other</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>C157437 - NCIt </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='fev1_fvc_post_bronch_percent'>fev1_fvc_post_bronch_percent</td>
+                <td class='propCollCol2'>Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided by the Forced Vital Capacity (FVC) post-bronchodilator.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3302956 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='fev1_fvc_pre_bronch_percent'>fev1_fvc_pre_bronch_percent</td>
+                <td class='propCollCol2'>Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided by the Forced Vital Capacity (FVC) pre-bronchodilator.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3302955 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='fev1_ref_post_bronch_percent'>fev1_ref_post_bronch_percent</td>
+                <td class='propCollCol2'>The percentage comparison to a normal value reference range of the volume of air that a patient can forcibly exhale from the lungs in one second post-bronchodilator.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3302948 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='fev1_ref_pre_bronch_percent'>fev1_ref_pre_bronch_percent</td>
+                <td class='propCollCol2'>The percentage comparison to a normal value reference range of the volume of air that a patient can forcibly exhale from the lungs in one second pre-bronchodilator.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3302947 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='haart_treatment_indicator'>haart_treatment_indicator</td>
+                <td class='propCollCol2'>The text term used to indicate whether the patient received Highly Active Antiretroviral Therapy (HARRT).</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='height'>height</td>
+                <td class='propCollCol2'>The height of the patient in centimeters.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>649 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hepatitis_sustained_virological_response'>hepatitis_sustained_virological_response</td>
+                <td class='propCollCol2'>The yes/no/unknown indicator used to describe whether the patient received treatment for a risk factor the patient had at the time of or prior to their diagnosis.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6423783 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='history_of_tumor'>history_of_tumor</td>
+                <td class='propCollCol2'>Indicates whether patient has a history of tumors.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='history_of_tumor_type'>history_of_tumor_type</td>
+                <td class='propCollCol2'>Describes the type of the patient's prior diagnosed tumor.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Phenochromocytoma or Paraganglioma</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hiv_viral_load'>hiv_viral_load</td>
+                <td class='propCollCol2'>Numeric value that represents the concentration of an analyte or aliquot extracted from the sample or sample portion, measured in milligrams per milliliter.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2649682 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hormonal_contraceptive_type'>hormonal_contraceptive_type</td>
+                <td class='propCollCol2'>The specific type of hormonal contraceptives used by the subject.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Progestin</li><li>Progestin and Estrogen</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hormonal_contraceptive_use'>hormonal_contraceptive_use</td>
+                <td class='propCollCol2'>The text term used to indicate whether the patient used hormonal contraceptives.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Current User</li><li>Former User</li><li>Never Used</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hormone_replacement_therapy_type'>hormone_replacement_therapy_type</td>
+                <td class='propCollCol2'>The specific type of hormone replacement therapy received by the patient.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Estrogen only</li><li>Progesterone and Estrogen</li><li>Progesterone only</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hpv_positive_type'>hpv_positive_type</td>
+                <td class='propCollCol2'>Text classification to represent the strain or type of human papillomavirus identified in an individual.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>16</li><li>18</li><li>26</li><li>31</li><li>33</li><li>35</li><li>39</li><li>45</li><li>51</li><li>52</li></ul><ul class='enum-list' style='display:none;'><li>53</li><li>56</li><li>58</li><li>59</li><li>63</li><li>66</li><li>68</li><li>70</li><li>73</li><li>82</li><li>Other</li><li>Unknown</li><li>Not Reported</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2922649 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hysterectomy_margins_involved'>hysterectomy_margins_involved</td>
+                <td class='propCollCol2'>The text term used to indicate whether the patient's disease was determined to be involved based on the surgical margins of the hysterectomy.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Bladder</li><li>Macroscopic Parametrium</li><li>Microscopic Parametrium</li><li>None</li><li>Vagina</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='hysterectomy_type'>hysterectomy_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of hysterectomy the patient had.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Hysterectomy, NOS</li><li>Not performed</li><li>Radical Hysterectomy</li><li>Simple Hysterectomy</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='imaging_result'>imaging_result</td>
+                <td class='propCollCol2'>The text term used to describe the result of the imaging or scan performed on the patient.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Positive</li><li>Indeterminate</li><li>Negative</li><li>Not Performed</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='imaging_type'>imaging_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of imaging or scan performed on the patient.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>99mTc Bone Scintigraphy</li><li>CT Scan</li><li>MRI</li><li>PET</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='immunosuppressive_treatment_type'>immunosuppressive_treatment_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of immunosuppresive treatment the patient received.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Anti-TNF Therapy</li><li>Azathioprine</li><li>Cyclophosphamide</li><li>Methotrexate</li><li>None</li><li>Other</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='karnofsky_performance_status'>karnofsky_performance_status</td>
+                <td class='propCollCol2'>Text term used to describe the classification used of the functional capabilities of a person.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>0</li><li>10</li><li>20</li><li>30</li><li>40</li><li>50</li><li>60</li><li>70</li><li>80</li><li>90</li></ul><ul class='enum-list' style='display:none;'><li>100</li><li>Unknown</li><li>Not Reported</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2003853 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='menopause_status'>menopause_status</td>
+                <td class='propCollCol2'>Text term used to describe the patient's menopause status.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Premenopausal</li><li>Perimenopausal</li><li>Postmenopausal</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2434914 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='nadir_cd4_count'>nadir_cd4_count</td>
+                <td class='propCollCol2'>Numeric value that represents the lowest point to which the CD4 count has dropped (nadir).</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='pancreatitis_onset_year'>pancreatitis_onset_year</td>
+                <td class='propCollCol2'>Numeric value to represent the year that the patient was diagnosed with clinical chronic pancreatitis.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3457763 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='pregnancy_outcome'>pregnancy_outcome</td>
+                <td class='propCollCol2'>The text term used to describe the type of pregnancy the patient had.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Ectopic Pregnancy</li><li>Induced Abortion</li><li>Live Birth</li><li>Miscarriage</li><li>Stillbirth</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='procedures_performed'>procedures_performed</td>
+                <td class='propCollCol2'>The type of procedures performed on the patient.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Colonoscopy</li><li>Endoscopy</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='progression_or_recurrence'>progression_or_recurrence</td>
+                <td class='propCollCol2'>Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3121376 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='progression_or_recurrence_anatomic_site'>progression_or_recurrence_anatomic_site</td>
+                <td class='propCollCol2'>The text term used to describe the anatomic site of the progressive or recurrent disease.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Abdomen, NOS</li><li>Abdominal esophagus</li><li>Accessory sinus, NOS</li><li>Acoustic nerve</li><li>Adrenal gland, NOS</li><li>Ampulla of Vater</li><li>Anal canal</li><li>Anterior 2/3 of tongue, NOS</li><li>Anterior floor of mouth</li><li>Anterior mediastinum</li></ul><ul class='enum-list' style='display:none;'><li>Anterior surface of epiglottis</li><li>Anterior wall of bladder</li><li>Anterior wall of nasopharynx</li><li>Anus, NOS</li><li>Aortic body and other paraganglia</li><li>Appendix</li><li>Ascending colon</li><li>Autonomic nervous system, NOS</li><li>Axillary tail of breast</li><li>Base of tongue, NOS</li><li>Bladder neck</li><li>Bladder, NOS</li><li>Blood</li><li>Body of pancreas</li><li>Body of penis</li><li>Body of stomach</li><li>Bone marrow</li><li>Bone of limb, NOS</li><li>Bone, NOS</li><li>Bones of skull and face and associated joints</li><li>Border of tongue</li><li>Brain stem</li><li>Brain, NOS</li><li>Branchial cleft</li><li>Breast, NOS</li><li>Broad ligament</li><li>Cardia, NOS</li><li>Carotid body</li><li>Cauda equina</li><li>Cecum</li><li>Central portion of breast</li><li>Cerebellum, NOS</li><li>Cerebral meninges</li><li>Cerebrum</li><li>Cervical esophagus</li><li>Cervix uteri</li><li>Choroid</li><li>Ciliary body</li><li>Cloacogenic zone</li><li>Colon, NOS</li><li>Commissure of lip</li><li>Conjunctiva</li><li>Connective, subcutaneous and other soft tissues of abdomen</li><li>Connective, subcutaneous and other soft tissues of head, face, and neck</li><li>Connective, subcutaneous and other soft tissues of lower limb and hip</li><li>Connective, subcutaneous and other soft tissues of pelvis</li><li>Connective, subcutaneous and other soft tissues of thorax</li><li>Connective, subcutaneous and other soft tissues of trunk, NOS</li><li>Connective, subcutaneous and other soft tissues of upper limb and shoulder</li><li>Connective, subcutaneous and other soft tissues, NOS</li><li>Cornea, NOS</li><li>Corpus uteri</li><li>Cortex of adrenal gland</li><li>Cranial nerve, NOS</li><li>Craniopharyngeal duct</li><li>Descended testis</li><li>Descending colon</li><li>Dome of bladder</li><li>Dorsal surface of tongue, NOS</li><li>Duodenum</li><li>Endocervix</li><li>Endocrine gland, NOS</li><li>Endometrium</li><li>Epididymis</li><li>Esophagus, NOS</li><li>Ethmoid sinus</li><li>Exocervix</li><li>External ear</li><li>External lip, NOS</li><li>External lower lip</li><li>External upper lip</li><li>Extrahepatic bile duct</li><li>Eye, NOS</li><li>Eyelid</li><li>Fallopian tube</li><li>Female genital tract, NOS</li><li>Floor of mouth, NOS</li><li>Frontal lobe</li><li>Frontal sinus</li><li>Fundus of stomach</li><li>Fundus uteri</li><li>Gallbladder</li><li>Gastric antrum</li><li>Gastrointestinal tract, NOS</li><li>Glans penis</li><li>Glottis</li><li>Greater curvature of stomach, NOS</li><li>Gum, NOS</li><li>Hard palate</li><li>Head of pancreas</li><li>Head, face or neck, NOS</li><li>Heart</li><li>Hematopoietic system, NOS</li><li>Hepatic flexure of colon</li><li>Hypopharyngeal aspect of aryepiglottic fold</li><li>Hypopharynx, NOS</li><li>Ileum</li><li>Ill-defined sites within respiratory system</li><li>Intestinal tract, NOS</li><li>Intra-abdominal lymph nodes</li><li>Intrahepatic bile duct</li><li>Intrathoracic lymph nodes</li><li>Islets of Langerhans</li><li>Isthmus uteri</li><li>Jejunum</li><li>Kidney, NOS</li><li>Labium majus</li><li>Labium minus</li><li>Lacrimal gland</li><li>Laryngeal cartilage</li><li>Larynx, NOS</li><li>Lateral floor of mouth</li><li>Lateral wall of bladder</li><li>Lateral wall of nasopharynx</li><li>Lateral wall of oropharynx</li><li>Lesser curvature of stomach, NOS</li><li>Lingual tonsil</li><li>Lip, NOS</li><li>Liver</li><li>Long bones of lower limb and associated joints</li><li>Long bones of upper limb, scapula and associated joints</li><li>Lower gum</li><li>Lower limb, NOS</li><li>Lower lobe, lung</li><li>Lower third of esophagus</li><li>Lower-inner quadrant of breast</li><li>Lower-outer quadrant of breast</li><li>Lung, NOS</li><li>Lymph node, NOS</li><li>Lymph nodes of axilla or arm</li><li>Lymph nodes of head, face and neck</li><li>Lymph nodes of inguinal region or leg</li><li>Lymph nodes of multiple regions</li><li>Main bronchus</li><li>Major salivary gland, NOS</li><li>Male genital organs, NOS</li><li>Mandible</li><li>Maxillary sinus</li><li>Meckel diverticulum</li><li>Mediastinum, NOS</li><li>Medulla of adrenal gland</li><li>Meninges, NOS</li><li>Middle ear</li><li>Middle lobe, lung</li><li>Middle third of esophagus</li><li>Mouth, NOS</li><li>Mucosa of lip, NOS</li><li>Mucosa of lower lip</li><li>Mucosa of upper lip</li><li>Myometrium</li><li>Nasal cavity</li><li>Nasopharynx, NOS</li><li>Nervous system, NOS</li><li>Nipple</li><li>Occipital lobe</li><li>Olfactory nerve</li><li>Optic nerve</li><li>Orbit, NOS</li><li>Oropharynx, NOS</li><li>Other ill-defined sites</li><li>Other specified parts of female genital organs</li><li>Other specified parts of male genital organs</li><li>Other specified parts of pancreas</li><li>Ovary</li><li>Overlapping lesion of accessory sinuses</li><li>Overlapping lesion of bladder</li><li>Overlapping lesion of bones, joints and articular cartilage</li><li>Overlapping lesion of bones, joints and articular cartilage of limbs</li><li>Overlapping lesion of brain</li><li>Overlapping lesion of brain and central nervous system</li><li>Overlapping lesion of breast</li><li>Overlapping lesion of cervix uteri</li><li>Overlapping lesion of colon</li><li>Overlapping lesion of connective, subcutaneous and other soft tissues</li><li>Overlapping lesion of corpus uteri</li><li>Overlapping lesion of digestive system</li><li>Overlapping lesion of endocrine glands and related structures</li><li>Overlapping lesion of esophagus</li><li>Overlapping lesion of eye and adnexa</li><li>Overlapping lesion of female genital organs</li><li>Overlapping lesion of floor of mouth</li><li>Overlapping lesion of heart, mediastinum and pleura</li><li>Overlapping lesion of hypopharynx</li><li>Overlapping lesion of ill-defined sites</li><li>Overlapping lesion of larynx</li><li>Overlapping lesion of lip</li><li>Overlapping lesion of lip, oral cavity and pharynx</li><li>Overlapping lesion of lung</li><li>Overlapping lesion of major salivary glands</li><li>Overlapping lesion of male genital organs</li><li>Overlapping lesion of nasopharynx</li><li>Overlapping lesion of other and unspecified parts of mouth</li><li>Overlapping lesion of palate</li><li>Overlapping lesion of pancreas</li><li>Overlapping lesion of penis</li><li>Overlapping lesion of peripheral nerves and autonomic nervous system</li><li>Overlapping lesion of rectum, anus and anal canal</li><li>Overlapping lesion of respiratory system and intrathoracic organs</li><li>Overlapping lesion of retroperitoneum and peritoneum</li><li>Overlapping lesion of skin</li><li>Overlapping lesion of small intestine</li><li>Overlapping lesion of stomach</li><li>Overlapping lesion of tongue</li><li>Overlapping lesion of tonsil</li><li>Overlapping lesion of urinary organs</li><li>Overlapping lesion of vulva</li><li>Overlapping lesions of oropharynx</li><li>Palate, NOS</li><li>Pancreas, NOS</li><li>Pancreatic duct</li><li>Parametrium</li><li>Parathyroid gland</li><li>Paraurethral gland</li><li>Parietal lobe</li><li>Parotid gland</li><li>Pelvic bones, sacrum, coccyx and associated joints</li><li>Pelvic lymph nodes</li><li>Pelvis, NOS</li><li>Penis, NOS</li><li>Peripheral nerves and autonomic nervous system of abdomen</li><li>Peripheral nerves and autonomic nervous system of head, face, and neck</li><li>Peripheral nerves and autonomic nervous system of lower limb and hip</li><li>Peripheral nerves and autonomic nervous system of pelvis</li><li>Peripheral nerves and autonomic nervous system of thorax</li><li>Peripheral nerves and autonomic nervous system of trunk, NOS</li><li>Peripheral nerves and autonomic nervous system of upper limb and shoulder</li><li>Peritoneum, NOS</li><li>Pharynx, NOS</li><li>Pineal gland</li><li>Pituitary gland</li><li>Placenta</li><li>Pleura, NOS</li><li>Postcricoid region</li><li>Posterior mediastinum</li><li>Posterior wall of bladder</li><li>Posterior wall of hypopharynx</li><li>Posterior wall of nasopharynx</li><li>Posterior wall of oropharynx</li><li>Prepuce</li><li>Prostate gland</li><li>Pylorus</li><li>Pyriform sinus</li><li>Rectosigmoid junction</li><li>Rectum, NOS</li><li>Renal pelvis</li><li>Reticuloendothelial system, NOS</li><li>Retina</li><li>Retromolar area</li><li>Retroperitoneum</li><li>Rib, sternum, clavicle and associated joints</li><li>Round ligament</li><li>Scrotum, NOS</li><li>Short bones of lower limb and associated joints</li><li>Short bones of upper limb and associated joints</li><li>Sigmoid colon</li><li>Skin of lip, NOS</li><li>Skin of lower limb and hip</li><li>Skin of other and unspecified parts of face</li><li>Skin of scalp and neck</li><li>Skin of trunk</li><li>Skin of upper limb and shoulder</li><li>Skin, NOS</li><li>Small intestine, NOS</li><li>Soft palate, NOS</li><li>Specified parts of peritoneum</li><li>Spermatic cord</li><li>Sphenoid sinus</li><li>Spinal cord</li><li>Spinal meninges</li><li>Spleen</li><li>Splenic flexure of colon</li><li>Stomach, NOS</li><li>Subglottis</li><li>Sublingual gland</li><li>Submandibular gland</li><li>Superior wall of nasopharynx</li><li>Supraglottis</li><li>Tail of pancreas</li><li>Temporal lobe</li><li>Testis, NOS</li><li>Thoracic esophagus</li><li>Thorax, NOS</li><li>Thymus</li><li>Thyroid gland</li><li>Tongue, NOS</li><li>Tonsil, NOS</li><li>Tonsillar fossa</li><li>Tonsillar pillar</li><li>Trachea</li><li>Transverse colon</li><li>Trigone of bladder</li><li>Undescended testis</li><li>Unknown primary site</li><li>Upper gum</li><li>Upper limb, NOS</li><li>Upper lobe, lung</li><li>Upper respiratory tract, NOS</li><li>Upper third of esophagus</li><li>Upper-inner quadrant of breast</li><li>Upper-outer quadrant of breast</li><li>Urachus</li><li>Ureter</li><li>Ureteric orifice</li><li>Urethra</li><li>Urinary system, NOS</li><li>Uterine adnexa</li><li>Uterus, NOS</li><li>Uvula</li><li>Vagina, NOS</li><li>Vallecula</li><li>Ventral surface of tongue, NOS</li><li>Ventricle, NOS</li><li>Vertebral column</li><li>Vestibule of mouth</li><li>Vulva, NOS</li><li>Waldeyer ring</li><li>Biliary tract, NOS</li><li>Cheek mucosa</li><li>Clitoris</li><li>Overlapping lesion of biliary tract</li><li>Unknown</li><li>Not Reported</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6161026 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='progression_or_recurrence_type'>progression_or_recurrence_type</td>
+                <td class='propCollCol2'>The text term used to describe the type of progressive or recurrent disease or relapsed disease.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Biochemical</li><li>Distant</li><li>Local</li><li>Regional</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6142385 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='recist_targeted_regions_number'>recist_targeted_regions_number</td>
+                <td class='propCollCol2'>Numeric value that represents the number of baseline target lesions, as described by the Response Evaluation Criteria in Solid Tumours (RECIST) criteria.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='recist_targeted_regions_sum'>recist_targeted_regions_sum</td>
+                <td class='propCollCol2'>Numeric value that represents the sum of baseline target lesions, as described by the Response Evaluation Criteria in Solid Tumours (RECIST) criteria.</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='reflux_treatment_type'>reflux_treatment_type</td>
+                <td class='propCollCol2'>Text term used to describe the types of treatment used to manage gastroesophageal reflux disease (GERD).
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Antacids</li><li>H2 Blockers</li><li>Medically Treated</li><li>No Treatment</li><li>Not Applicable</li><li>Not Reported</li><li>Proton Pump Inhibitors</li><li>Surgically Treated</li><li>Unknown</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>3440206 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='risk_factor'>risk_factor</td>
+                <td class='propCollCol2'>The text term used to describe a risk factor the patient had at the time of or prior to their diagnosis.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Alcohol Consumption</li><li>Alcoholic Liver Disease</li><li>Allergy, Animal, NOS</li><li>Allergy, Ant</li><li>Allergy, Bee</li><li>Allergy, Cat</li><li>Allergy, Dairy or Lactose</li><li>Allergy, Dog</li><li>Allergy, Eggs</li><li>Allergy, Food, NOS</li></ul><ul class='enum-list' style='display:none;'><li>Allergy, Fruit</li><li>Allergy, Meat</li><li>Allergy, Mold or Dust</li><li>Allergy, Nuts</li><li>Allergy, Processed Foods</li><li>Allergy, Seafood</li><li>Allergy, Wasp</li><li>Alpha-1 Antitrypsin Deficiency</li><li>Autoimmune Atrophic Chronic Gastritis</li><li>Barrett's Esophagus</li><li>Beckwith-Wiedemann</li><li>Behcet's Disease</li><li>Cancer</li><li>Cholelithiasis</li><li>Chronic Hepatitis</li><li>Cirrhosis</li><li>Colon Polyps</li><li>Common variable immune deficiency (CVID)</li><li>Denys-Drash Syndrome</li><li>Diabetes, NOS</li><li>Diabetes, Type I</li><li>Diabetes, Type II</li><li>Diet</li><li>Diverticulitis</li><li>Endometriosis</li><li>Endosalpingiosis</li><li>Eczema</li><li>Epstein-Barr Virus</li><li>Familial Adenomatous Polyposis</li><li>Fanconi Anemia</li><li>Fibrosis</li><li>Gastric Polyp(s)</li><li>Gilbert's Syndrome</li><li>Gorlin Syndrome</li><li>Hashimoto's Thyroiditis</li><li>Hay Fever</li><li>Headache</li><li>Helicobacter Pylori-Associated Gastritis</li><li>Hematologic Disorder, NOS</li><li>Hemihypertrophy</li><li>Hemochromatosis</li><li>Hepatic Encephalopathy</li><li>Hepatitis B Infection</li><li>Hepatitis C Infection</li><li>Hepatitis, NOS</li><li>High Grade Dysplasia</li><li>HIV</li><li>Human Papillomavirus Infection</li><li>Hypospadias</li><li>Intestinal Metaplasia</li><li>Iron Overload</li><li>Li-Fraumeni Syndrome</li><li>Low Grade Dysplasia</li><li>Lymphocytic Thyroiditis</li><li>Lynch Syndrome</li><li>Myasthenia Gravis</li><li>Nonalcoholic Fatty Liver Disease</li><li>Nonalcoholic Steatohepatitis</li><li>Obesity</li><li>Oral Contraceptives</li><li>Pancreatitis</li><li>Parasitic Disease of Biliary Tract</li><li>Primary Sclerosing Cholangitis</li><li>Recurrent Pyogenic Cholangitis</li><li>Reflux Disease</li><li>Rheumatoid Arthritis</li><li>Rubinstein-Taybi Syndrome</li><li>Sarcoidosis</li><li>Seizure</li><li>Sensory Changes</li><li>Serous tubal intraepithelial carcinoma (STIC)</li><li>Steatosis</li><li>Tattoo</li><li>Thyroid Nodular Hyperplasia</li><li>Tobacco, NOS</li><li>Tobacco, Smokeless</li><li>Tobacco, Smoking</li><li>Turcot Syndrome</li><li>Undescended Testis</li><li>Vision Changes</li><li>Wagr Syndrome</li><li>Unknown</li><li>Not Reported</li><li>Squamous Metaplasia</li><li>High-grade Prostatic Intraepithelial Neoplasia (PIN)</li><li>Chlamydia</li><li>Epithelial Dysplasia</li><li>Von Hippel-Lindau Syndrome</li><li>Varicella Zoster Virus</li><li>Tubulointerstitial Disease</li><li>Benign Prostatic Hyperplasia</li><li>Chronic Systemic Steroid Use</li><li>Epithelial Hyperplasia</li><li>Herpes Zoster</li><li>Syphilis</li><li>Hereditary Prostate Cancer</li><li>Colonization, Fungal</li><li>Hereditary Papillary Renal Cell Carcinoma</li><li>Autoimmune Lymphoproliferative Syndrome (ALPS)</li><li>Dermatomyosis</li><li>Gastritis</li><li>Vascular Disease</li><li>Polycystic Ovarian Syndrome (PCOS)</li><li>Hereditary Renal Cell Carcinoma</li><li>Abnormal Glucose Level</li><li>Skin Rash</li><li>Sjogren's Syndrome</li><li>Inflammation, Hyperkeratosis</li><li>Metabolic Syndrome</li><li>Cowden Syndrome</li><li>Tuberculosis</li><li>Cyst(s)</li><li>Lymphocytic Meningitis</li><li>Adenosis (Atypical Adenomatous Hyperplasia)</li><li>BAP1 Tumor Predisposition Syndrome</li><li>Hereditary Breast Cancer</li><li>Escherichia coli</li><li>Chronic Kidney Disease</li><li>Cytomegalovirus (CMV)</li><li>Hereditary Leiomyomatosis and Renal Cell Carcinoma</li><li>Ataxia-telangiectasia</li><li>Malaria</li><li>Staphylococcus aureus</li><li>Cryptococcal Meningitis</li><li>Hereditary Kidney Oncocytoma</li><li>Colonization, Bacterial</li><li>Hereditary Ovarian Cancer</li><li>Nodular Prostatic Hyperplasia</li><li>Treponema pallidum</li><li>Tumor-associated Lymphoid Proliferation</li><li>Mycobacterium avium Complex</li><li>Bacteroides fragilis</li><li>Glomerular Disease</li><li>Birt-Hogg-Dube Syndrome</li><li>BRCA Family History</li><li>Pneumocystis Pneumonia</li><li>Shingles</li><li>Sialadenitis</li><li>Tuberous Sclerosis</li><li>Succinate Dehydrogenase-Deficient Renal Cell Carcinoma</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6142389 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='risk_factor_treatment'>risk_factor_treatment</td>
+                <td class='propCollCol2'>The yes/no/unknown indicator used to describe whether the patient received treatment for a risk factor the patient had at the time of or prior to their diagnosis.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6514356 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='scan_tracer_used'>scan_tracer_used</td>
+                <td class='propCollCol2'>The text term used to describe the type of tracer used during the imaging or scan of the patient.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Acetate</li><li>Axumin</li><li>Choline</li><li>PSMA</li><li>Sodium Fluoride</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='undescended_testis_corrected'>undescended_testis_corrected</td>
+                <td class='propCollCol2'>Indicates whether the patient's undescended testis was corrected.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='undescended_testis_corrected_age'>undescended_testis_corrected_age</td>
+                <td class='propCollCol2'>The patient's age when their undescended testis was corrected.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='undescended_testis_corrected_laterality'>undescended_testis_corrected_laterality</td>
+                <td class='propCollCol2'>Descrives the lateral location of the patient's undescended testis correction.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Left</li><li>Right</li><li>Bilateral</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='undescended_testis_corrected_method'>undescended_testis_corrected_method</td>
+                <td class='propCollCol2'>Describes the method used to correct the patient's undescended testis.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Spontaneous Descent</li><li>Orchiopexy</li><li>Hormones</li><li>Testis Removed</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='undescended_testis_history'>undescended_testis_history</td>
+                <td class='propCollCol2'>The persistent failure of one or both testes to descend into the scrotum.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>C12326 - NCIt </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='undescended_testis_history_laterality'>undescended_testis_history_laterality</td>
+                <td class='propCollCol2'>Describes the lateral location of the patient's undescended testis.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Left</li><li>Right</li><li>Bilateral</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='viral_hepatitis_serologies'>viral_hepatitis_serologies</td>
+                <td class='propCollCol2'>Text term that describes the kind of serological laboratory test used to determine the patient's hepatitus status.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>HBV Core Antibody</li><li>HBV DNA</li><li>HBV Genotype</li><li>HBV Surface Antibody</li><li>HCV Genotype</li><li>Hepatitis B Surface Antigen</li><li>Hepatitis C Antibody</li><li>Hepatitis C Virus RNA</li><li>Unknown</li><li>Not Reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>4395982 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='weight'>weight</td>
+                <td class='propCollCol2'>The weight of the patient measured in kilograms.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>651 - caDSR </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>

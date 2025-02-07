@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Protein Abundance</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Protein Abundance</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>N/A</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>N/A</div>
+                    <a href="#" target='_blank'>(N/A - N/A)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>spectral_count_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Gene.html">Gene</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Protein Abundance references measurements for a Gene.</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Study.html">Study</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Protein Abundance references the Study it is derived from.</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Study Run Metadata.html">Study Run Metadata</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Protein Abundance references an experimental run of the Study it is derived from.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='distinct_peptide'>distinct_peptide</td>
+                <td class='propCollCol2'>Number of distinct peptide sequences associated with the gene in acquisitions from a specific analytical sample</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='log_ratio'>log_ratio</td>
+                <td class='propCollCol2'>Average log-ratio of sample reporter-ion to common reference of peptide ions associated with the gene in acquisitions from a specific biological sample.</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='plex_name'>plex_name</td>
+                <td class='propCollCol2'>For label-free workflows, the plex name is the aliquot (biological sample) identifier. For labelled workflows (iTRAQ, TMT), the plex name indicates the aliquot (biological sample) identifiers and any common reference aliquot (sample) identifier, separated by colons, in reporter ion order. Biological replicates, if any, are indicated by a trailing .1, .2, etc. on the aliquot identifier.</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='precursor_area'>precursor_area</td>
+                <td class='propCollCol2'>Total precursor area of peptide ions associated with the gene in acquisitions from a specific biological sample.</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='spectral_count'>spectral_count</td>
+                <td class='propCollCol2'>Number of spectra matched to peptides associated with the gene in acquisitions from a specific analytical sample</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='unshared_log_ratio'>unshared_log_ratio</td>
+                <td class='propCollCol2'>Average log-ratio of sample reporter-ion to common reference of peptide ions of unshared peptides only associated with the gene in acquisitions from a specific biological sample.</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='unshared_peptide'>unshared_peptide</td>
+                <td class='propCollCol2'>Number of unshared peptide sequences associated with the gene in acquisitions from a specific analytical sample</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='unshared_precursor_area'>unshared_precursor_area</td>
+                <td class='propCollCol2'>Total precursor area of peptide ions of unshared peptides only associated with the gene in acquisitions from a specific biological sample.</td>
+                <td class='propCollCol3'>number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>

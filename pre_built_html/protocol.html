@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Protocol</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Protocol</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>Metadata</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>The formal plan of an experiment or research activity, including the objective, rationale, design, materials and methods for the conduct of the study; intervention description, and method of data analysis.</div>
+                    <a href="#" target='_blank'>(NCIt - C70817)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>protocol_id</li><li>protocol_submitter_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Study.html">Study</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Protocol references the Study it is part of.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='1d_chromatography_type'>1d_chromatography_type</td>
+                <td class='propCollCol2'>Type of chromatography of the first dimension. If only 1D was used, annotate that dimension here.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>RPLC</li><li>bRPLC</li><li>bRPLC (pH 7.5)</li><li>bRPLC (pH 10)</li><li>SCX</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='2d_chromatography_type'>2d_chromatography_type</td>
+                <td class='propCollCol2'>Type of chromatography for the second dimension. This will generally be RPLC.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>RPLC</li><li>UHPLC</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='acquisition_type'>acquisition_type</td>
+                <td class='propCollCol2'>Mass spectrometry acquisition method</td>
+                <td class='propCollCol3'>Enumeration<ul><li>DDA</li><li>DIA</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='alkylation_reagent'>alkylation_reagent</td>
+                <td class='propCollCol2'>Reagent used for cysteine alkylation</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Iodoacetamide (IAA)</li><li>2-chloroacetamide (TCEP)</li><li>tris(2-carboxyethyl)phosphine</li><li>Methyl Methanethiosulfonate (MMTS)</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='chromatography_dimensions_count'>chromatography_dimensions_count</td>
+                <td class='propCollCol2'>Number of discrete chromatographic dimensions used</td>
+                <td class='propCollCol3'>Enumeration<ul><li>1</li><li>2</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='dia_multiplexing'>dia_multiplexing</td>
+                <td class='propCollCol2'>Uses overlapping windows (MSX)</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>MS:1000501,MS:1000500 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='digestion_reagent'>digestion_reagent</td>
+                <td class='propCollCol2'>Enzyme or reagent used for digestion. Multiple enzymes can be separated by (;)</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>2-iodobenzoate</li><li>Arg-C, Asp-N</li><li>Asp-N_ambic</li><li>Chymotrypsin</li><li>CNBr, Formic_acid</li><li>Glutamyl endopeptidase</li><li>Leukocyte elastase</li><li>Lys-C, Lys-C/P</li><li>No cleavage</li><li>NoEnzyme</li></ul><ul class='enum-list' style='display:none;'><li>PepsinA</li><li>Proline endopeptidase</li><li>TrypChymo</li><li>Trypsin</li><li>Trypsin/P</li><li>Unspecific cleavage</li><li>V8-DE</li><li>V8-E</li><li>Lys-C</li><li>Trypsin</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>MS:1001045 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='dissociation_type'>dissociation_type</td>
+                <td class='propCollCol2'>Gas phase dissociation type</td>
+                <td class='propCollCol3'>Enumeration<ul><li>HCD</li><li>CID</li><li>ETD</li><li>ECD</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>MS:1000044 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='enrichment'>enrichment</td>
+                <td class='propCollCol2'>Protocol or reagent used for enrichment, for example: Fe3+ NTA-Agarose (Qiagen). User can select existing enrichments or add their own.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='enrichment_strategy'>enrichment_strategy</td>
+                <td class='propCollCol2'>Type of peptide or protein enrichment</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Acetylome</li><li>Proteome</li><li>Phosphoproteome</li><li>Glycoproteome</li><li>Ubiquitylome</li><li>Metabolome</li><li>Lipidome</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='experiment_type'>experiment_type</td>
+                <td class='propCollCol2'>Specifies the method used for differential analysis in the study, including the labeling approach (e.g., label-free, TMT, iTRAQ) and additional details such as the number of channels for labeled experiments (e.g., TMT10, iTRAQ4).</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Label Free</li><li>iTRAQ</li><li>TMT</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='fractions_analyzed_count'>fractions_analyzed_count</td>
+                <td class='propCollCol2'>Final number of fractions analyzed by mass spectrometry. For Thermo instruments, this will equal the number of data files.</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='instrument_make'>instrument_make</td>
+                <td class='propCollCol2'>Manufacturer of instrument</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Agilent</li><li>Applied Biosystems</li><li>Bruker</li><li>Dionex</li><li>Hitachi</li><li>LECO</li><li>SCIEX</li><li>Shimadzu</li><li>Thermo Fisher Scientific</li><li>Varian</li></ul><ul class='enum-list' style='display:none;'><li>Waters</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='instrument_model'>instrument_model</td>
+                <td class='propCollCol2'>Model of instrument</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>1200 series LC/MSD SL</li><li>1200 series LC/MSD VL</li><li>6110 Quadrupole LC/MS</li><li>6120A Quadrupole LC/MS</li><li>6120B Quadrupole LC/MS</li><li>6130 Quadrupole LC/MS</li><li>6140 Quadrupole LC/MS</li><li>6150 Quadrupole LC/MS</li><li>6210 Time-of-Flight LC/MS</li><li>6220 Time-of-Flight LC/MS</li></ul><ul class='enum-list' style='display:none;'><li>6224 Time-of-Flight LC/MS</li><li>6230A Time-of-Flight LC/MS</li><li>6230B Time-of-Flight LC/MS</li><li>6310 Ion Trap LC/MS</li><li>6320 Ion Trap LC/MS</li><li>6330 Ion Trap LC/MS</li><li>6340 Ion Trap LC/MS</li><li>6410 Triple Quadrupole LC/MS</li><li>6420 Triple Quadrupole LC/MS</li><li>6430 Triple Quadrupole LC/MS</li><li>6460 Triple Quadrupole LC/MS</li><li>6490 Triple Quadrupole LC/MS</li><li>6495A Triple Quadrupole LC/MS</li><li>6495B Triple Quadrupole LC/MS</li><li>6510 Quadrupole Time-of-Flight LC/MS</li><li>6520A Quadrupole Time-of-Flight LC/MS</li><li>6520B Q-TOF LC/MS</li><li>6530A Q-TOF LC/MS</li><li>6530B Q-TOF LC/MS</li><li>6538 Q-TOF LC/MS</li><li>6540 Q-TOF LC/MS</li><li>6542 Q-TOF LC/MS</li><li>6545 Q-TOF LC/MS</li><li>6550 iFunnel Q-TOF LC/MS</li><li>6550A iFunnel Q-TOF LC/MS</li><li>6560 Q-TOF LC/MS</li><li>6570 Q-TOF LC/MS</li><li>7000A Triple Quadrupole GC/MS</li><li>7000B Triple Quadrupole GC/MS</li><li>7800 Quadrupole ICP-MS</li><li>8800 Triple Quadrupole ICP-MS</li><li>4700 Proteomics Analyzer</li><li>4800 Proteomics Analyzer</li><li>Voyager-DE PRO</li><li>Voyager-DE STR</li><li>Bruker Daltonics amaZon series</li><li>Bruker Daltonics apex series</li><li>Bruker Daltonics BioTOF series</li><li>Bruker Daltonics esquire series</li><li>Bruker Daltonics EVOQ series</li><li>Bruker Daltonics flex series</li><li>Bruker Daltonics HCT series</li><li>Bruker Daltonics maXis series</li><li>Bruker Daltonics micrOTOF series</li><li>Bruker Daltonics SCION series</li><li>Bruker Daltonics solarix series</li><li>timsTOF Pro</li><li>Citius HRT</li><li>Pegasus</li><li>Pegasus 4D</li><li>Pegasus BT</li><li>Pegasus HRT</li><li>Pegasus III</li><li>TruTOF</li><li>2000 QTRAP</li><li>2500 QTRAP</li><li>3200 QTRAP</li><li>3500 QTRAP</li><li>4000 QTRAP</li><li>4000 QTRAP</li><li>4800 Plus MALDI TOF/TOF</li><li>5800 TOF/TOF</li><li>API 100</li><li>API 100LC</li><li>API 150EX</li><li>API 150EX Prep</li><li>API 165</li><li>API 2000</li><li>API 300</li><li>API 3000</li><li>API 3200</li><li>API 350</li><li>API 365</li><li>API 4000</li><li>API 5000</li><li>proteomics solution 1</li><li>Q TRAP</li><li>QSTAR</li><li>QSTAR Elite</li><li>QSTAR Pulsar</li><li>QSTAR XL</li><li>QTRAP 4500</li><li>QTRAP 5500</li><li>QTRAP 6500</li><li>QTRAP 6500+m</li><li>SymBiot I</li><li>SymBiot XVI</li><li>Triple Quad 3500</li><li>Triple Quad 4500</li><li>Triple Quad 5500</li><li>Triple Quad 6500</li><li>Triple Quad 6500+</li><li>TripleTOF 4600</li><li>TripleTOF 5600</li><li>TripleTOF 5600+</li><li>TripleTOF 6600</li><li>X500R QTOF</li><li>AXIMA Assurance Linear MALDI-TOF</li><li>AXIMA CFR MALDI-TOF</li><li>AXIMA Confidence MALDI-TOF</li><li>AXIMA Performance MALDI-TOF/TOF</li><li>AXIMA-CFR plus</li><li>AXIMA-QIT</li><li>Shimadzu MALDI-7090</li><li>LCMS-2010A</li><li>LCMS-2010EV</li><li>LCMS-2020</li><li>LCMS-8040</li><li>LCMS-8045</li><li>LCMS-8050</li><li>LCMS-8060</li><li>LCMS-9030</li><li>LCMS-IT-TOF</li><li>Accela PDA</li><li>DFS</li><li>DSQ II</li><li>Element 2</li><li>Element GD</li><li>Element XR</li><li>Exactive</li><li>Exactive Plus</li><li>GC IsoLink</li><li>ISQ</li><li>ITQ 1100</li><li>ITQ 700</li><li>ITQ 900</li><li>LTQ</li><li>LTQ FT</li><li>LTQ FT Ultra</li><li>LTQ Orbitrap</li><li>LTQ Orbitrap Classic</li><li>LTQ Orbitrap Discovery</li><li>LTQ Orbitrap Elite</li><li>LTQ Orbitrap Velos</li><li>LTQ Orbitrap XL</li><li>LTQ Orbitrap XL ETD</li><li>LTQ Velos</li><li>LTQ Velos ETD</li><li>LTQ XL</li><li>LTQ XL ETD</li><li>LXQ</li><li>MALDI LTQ Orbitrap</li><li>MALDI LTQ XL</li><li>Orbitrap Fusion</li><li>Orbitrap Fusion ETD</li><li>Orbitrap Fusion Lumos</li><li>Q Exactive</li><li>Q Exactive HF</li><li>Q Exactive HF-X</li><li>Q Exactive Plus</li><li>Surveyor PDA</li><li>TSQ 8000 Evo</li><li>TSQ 9000</li><li>TSQ Altis</li><li>TSQ Endura</li><li>TSQ Quantis</li><li>TSQ Quantiva</li><li>TSQ Quantum Access</li><li>TSQ Quantum Ultra</li><li>TSQ Quantum Ultra AM</li><li>TSQ Vantage</li><li>Velos Plus</li><li>explorer</li><li>HiRes ESI</li><li>HiRes MALDI</li><li>OMEGA</li><li>OMEGA-2001</li><li>ultima</li><li>3100</li><li>Acquity TQD</li><li>ACQUITY UPLC</li><li>Acquity UPLC FLR</li><li>ACQUITY UPLC H-Class</li><li>ACQUITY UPLC H-Class Bio</li><li>ACQUITY UPLC I-Class</li><li>Acquity UPLC PDA</li><li>ACQUITY UPLC Systems with 2D Technology</li><li>Auto Spec Ultima NT</li><li>GCT</li><li>GCT Premier</li><li>IsoPrime</li><li>IsoProbe T</li><li>M@LDI L</li><li>M@LDI LR</li><li>MALDI Synapt G2-S HDMS</li><li>MALDI Synapt G2-S MS</li><li>MALDI SYNAPT G2-Si</li><li>MALDI Synapt HDMS</li><li>MALDI Synapt MS</li><li>nanoACQUITY UPLC</li><li>nanoACQUITY UPLC System with 1D Technology</li><li>nanoACQUITY UPLC with HDX Technology</li><li>NG-5400</li><li>Platform ICP</li><li>Q-Tof micro</li><li>Q-Tof Premier</li><li>Q-Tof Ultima</li><li>quattro micro</li><li>Quattro micro GC</li><li>Quattro Ultima</li><li>SQ Detector 2</li><li>Synapt G2 HDMS</li><li>Synapt G2 MS</li><li>Synapt G2-S HDMS</li><li>Synapt G2-S MS</li><li>SYNAPT G2-Si</li><li>Synapt HDMS</li><li>Synapt MS</li><li>TRIZAIC UPLC nanoTile</li><li>Xevo G2 Q-Tof</li><li>Xevo G2 Tof</li><li>Xevo G2 XS Tof</li><li>Xevo G2-S QTof</li><li>Xevo G2-S Tof</li><li>Xevo Q-Tof</li><li>Xevo TQ MS</li><li>Xevo TQ-S</li><li>Xevo TQD</li><li>220 GC/MS Ion Trap System</li><li>240 GC/MS Ion Trap System</li><li>6200 Series Accurate-Mass Time-of-Flight (TOF) LC/MS</li><li>6400 Series Triple Quadrupole LC/MS</li><li>7000 Triple Quadrupole GC/MS System</li><li>7200 GC/Q-TOF</li><li>EVOQ Elite</li><li>EVOQ Qube</li><li>maXis 4G</li><li>maXis impact</li><li>microOTOF focus II</li><li>microOTOF-Q II</li><li>solariX</li><li>Pipeline</li><li>MALDI 4800</li><li>FTMS</li><li>LTQ Velos Pro</li><li>LTQ-FT</li><li>LTQ-OT</li><li>Orbitrap Elite</li><li>Orbitrap Velos</li><li>TSQ Quantum</li><li>Acquity SQD</li><li>API-US</li><li>Bio-Q</li><li>EMD 1000</li><li>LCT</li><li>LCT Premier</li><li>LCT Premier XE</li><li>MALDI L</li><li>MALDI LR</li><li>MALDI micro MX</li><li>MALDI R</li><li>MALDI Synapt G2 HDMS</li><li>MALDI Synapt G2 MS</li><li>Micro</li><li>Platform</li><li>Platform II</li><li>Platform LCZ</li><li>PLC</li><li>Premier</li><li>Quattro</li><li>Quattro II</li><li>Quattro LC</li><li>Quattro Premier</li><li>Quattro Premier XE</li><li>Quattro Ultima Pt</li><li>TofSpec</li><li>TofSpec 2E</li><li>TofSpec E</li><li>TofSpec SE</li><li>Xevo QTof</li><li>ZMD</li><li>ZQ</li><li>Orbitrap Lumos</li><li>Thermo Orbitrap Q Exactive HF-X</li><li>Thermo Orbitrap Fusion Lumos</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>depends on make -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='isobaric_labeling_reagent'>isobaric_labeling_reagent</td>
+                <td class='propCollCol2'>Reagent set used for isobaric labeling</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>iTRAQ4</li><li>iTRAQ8</li><li>TMT6</li><li>TMT10</li><li>TMT11</li><li>TMT16</li><li>TMT18</li><li>180</li><li>AQUA</li><li>ICAT</li></ul><ul class='enum-list' style='display:none;'><li>ICPL</li><li>SILAC</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='label_free_quantitation'>label_free_quantitation</td>
+                <td class='propCollCol2'>Type of label free data analysis strategy proposed for this data</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Label-free protein level quantitation</li><li>Label-free peptide level quantitation</li><li>Label-free protein group level quantitation</li><li>Label-free raw feature quantitation</li><li>Label-free gene level quantitation</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>MS:1001834 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='labeled_quantitation'>labeled_quantitation</td>
+                <td class='propCollCol2'>Type of labeling used</td>
+                <td class='propCollCol3'>Enumeration<ul><li>AminoxyTMT</li><li>DiART</li><li>DiLeu</li><li>Glyco-TMT</li><li>Hydrazide TMT</li><li>IodoTMT</li><li>IPTL</li><li>iTRAQ</li><li>iTRAQH</li><li>TMT</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>MS:1002009 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='quantitation_strategy'>quantitation_strategy</td>
+                <td class='propCollCol2'>General strategy used for differential analysis</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Absolute quantitation analysis</li><li>Isobaric label quantitation analysis</li><li>LC-MS label-free quantitation analysis</li><li>Metabolic labeling 14N / 15N quantitation analysis</li><li>MS1 label-based analysis</li><li>MS2 tag-based analysis</li><li>SILAC quantitation analysis</li><li>Spectral counting analysis</li><li>SRM quantitation analysis</li><li>MS2-based label-free quantitation</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'>MS:1001833 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='reporter_ion_ms_level'>reporter_ion_ms_level</td>
+                <td class='propCollCol2'>MS level at which fragmentation spectra should be analyzed for reporter ions</td>
+                <td class='propCollCol3'>Enumeration<ul><li>MS2</li><li>MS3</li></ul></td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='serial_number'>serial_number</td>
+                <td class='propCollCol2'>A serial number is a unique identifier, usually assigned by the manufacturer, to uniquely identify the instrument. This is especially useful if you are uploading raw data to PDC from multiple instruments in your lab. The serial number is usually located on the back side of the instrument. If a serial number is not available, you may also assign an alphanumeric tag that uniquely identifies the instrument.</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>True</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='amount_on_column'>amount_on_column</td>
+                <td class='propCollCol2'>Approximate mass with units</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='amount_on_column_uom'>amount_on_column_uom</td>
+                <td class='propCollCol2'>Unit of Measure of amount_on_column</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='column_inner_diameter'>column_inner_diameter</td>
+                <td class='propCollCol2'>Approximate diameter with units</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='column_inner_diameter_uom'>column_inner_diameter_uom</td>
+                <td class='propCollCol2'>Unit of Measure of column_inner_diameter, Âµm</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='column_length'>column_length</td>
+                <td class='propCollCol2'>Approximate length with units</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='column_length_uom'>column_length_uom</td>
+                <td class='propCollCol2'>Unit of Measure of column_length, cm</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='column_type'>column_type</td>
+                <td class='propCollCol2'>Type of column used</td>
+                <td class='propCollCol3'>Enumeration<ul><li>C18</li><li>New Objective</li><li>PicoFrit SELF/P</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='dda_topn'>dda_topn</td>
+                <td class='propCollCol2'>Number of precursors sampled per cycle</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='dia_ims'>dia_ims</td>
+                <td class='propCollCol2'>Data independent acquisition following ion mobility separation.</td>
+                <td class='propCollCol3'>Enumeration<ul><li>Yes</li><li>No</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='document_name'>document_name</td>
+                <td class='propCollCol2'>Name of protocol document</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='gradient_length'>gradient_length</td>
+                <td class='propCollCol2'>Time with units</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='gradient_length_uom'>gradient_length_uom</td>
+                <td class='propCollCol2'>Unit of Measure of gradient_length, minutes</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='ms1_resolution'>ms1_resolution</td>
+                <td class='propCollCol2'>MS1 resolution, typically at 400 m/z</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>MS:1000011 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='ms2_resolution'>ms2_resolution</td>
+                <td class='propCollCol2'>MS2 resolution, typically at 400 m/z</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>MS:1000011 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='normalized_collision_energy'>normalized_collision_energy</td>
+                <td class='propCollCol2'>Normalized collisions energy (%)</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>MS:1000138 - PSI MS </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='particle_size'>particle_size</td>
+                <td class='propCollCol2'>Approximate size with units</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='particle_size_uom'>particle_size_uom</td>
+                <td class='propCollCol2'>Unit of Measure of particle_size</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='particle_type'>particle_type</td>
+                <td class='propCollCol2'>Manufacturer or brand name of particle if applicable</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='protocol_date'>protocol_date</td>
+                <td class='propCollCol2'>Date protocol was created or updated</td>
+                <td class='propCollCol3'>Date</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='protocol_name'>protocol_name</td>
+                <td class='propCollCol2'>External analytical sample protocol name</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='starting_amount'>starting_amount</td>
+                <td class='propCollCol2'>Mass with units</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='starting_amount_uom'>starting_amount_uom</td>
+                <td class='propCollCol2'>Unit of Measure of starting_amount</td>
+                <td class='propCollCol3'>Enumeration<ul><li>µg</li><li>mg</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='analytical_technique'>analytical_technique</td>
+                <td class='propCollCol2'>General strategy used for metabolomics analysis</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False (Required for metabolomics only)</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='chromatography_instrument_make'>chromatography_instrument_make</td>
+                <td class='propCollCol2'>Manufacturer of chromatography instrument</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False (Required for metabolomics only)</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='chromatography_instrument_model'>chromatography_instrument_model</td>
+                <td class='propCollCol2'>Model of chromatography instrument</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False (Required for metabolomics only)</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='polarity'>polarity</td>
+                <td class='propCollCol2'>Ion polarity mode(s) used during chromatography</td>
+                <td class='propCollCol3'>Enumeration<ul><li>positive</li><li>negative</li><li>postive/negative</li></ul></td>
+                <td class='propCollCol4'>False (Required for metabolomics only)</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='reconstitution_solvent'>reconstitution_solvent</td>
+                <td class='propCollCol2'>Solvent used to reconstitute samples after evaporation</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='reconstitution_solvent_volume'>reconstitution_solvent_volume</td>
+                <td class='propCollCol2'>Volume of the reconstitution solvent used</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='reconstitution_volume_uom'>reconstitution_volume_uom</td>
+                <td class='propCollCol2'>Unit of measure of the reconstitution_solvent_volume</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='internal_standards'>internal_standards</td>
+                <td class='propCollCol2'>Reference material used for standardization/QC</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='ionization_mode'>ionization_mode</td>
+                <td class='propCollCol2'>Method of ionization used in Mass Spec such as Electron Impact (EI) or Electrospray Ionization (ESI)</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='extraction_method'>extraction_method</td>
+                <td class='propCollCol2'>Method/Solution used for metabolite extraction</td>
+                <td class='propCollCol3'>String</td>
+                <td class='propCollCol4'>False (Required for metabolomics only)</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>

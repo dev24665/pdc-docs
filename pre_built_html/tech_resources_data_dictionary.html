@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+     <style>
+        .itemPropertiesTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemPropertiesTable td, .itemPropertiesTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemPropertiesTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemPropertiesTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemPropertiesTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 {
+            width: 30%;
+        }
+        .propCollCol2 {
+            width: 70%;
+        }
+    </style>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l4"><a class="reference internal" href="biospecimen.html">Biospecimen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+<div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div itemprop="articleBody">
+        <div class="contentArea">
+            <div class="pageTitleArea">
+                <div class='pageTitle'><h1>Data Dictionary</h1></div>
+                <div class="pageDesc"></div>
+            </div>
+            <div>
+               
+                <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+                    <tr class='dict_tbl_header'>
+                        <td colspan="2" style="background-color: #2980b9;color: white;">Administrative</td>
+                    </tr>
+                    
+            <tr>
+                <td class='propCollCol1'><a href='Case.html'>Case</a></td>
+                <td class='propCollCol2'>The collection of all data related to a specific subject in the context of a specific project.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Program.html'>Program</a></td>
+                <td class='propCollCol2'>A broad framework of goals to be achieved.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Project.html'>Project</a></td>
+                <td class='propCollCol2'>Any specifically defined piece of work that is undertaken or attempted to meet a single requirement.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Study.html'>Study</a></td>
+                <td class='propCollCol2'>A detailed examination, analysis, or critical inspection of a subject designed to discover facts about it.</td>
+            </tr>
+            
+                </table>
+              
+                <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+                    <tr class='dict_tbl_header'>
+                        <td colspan="2" style="background-color: #2980b9;color: white;">Biological</td>
+                    </tr>
+                    
+            <tr>
+                <td class='propCollCol1'><a href='Gene.html'>Gene</a></td>
+                <td class='propCollCol2'>A functional unit of heredity which occupies a specific position on a particular chromosome and serves as the template for a product that contributes to a phenotype or a biological function.</td>
+            </tr>
+            
+                </table>
+               
+                <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+                    <tr class='dict_tbl_header'>
+                        <td colspan="2" style="background-color: #2980b9;color: white;">Biospecimen</td>
+                    </tr>
+                    
+            <tr>
+                <td class='propCollCol1'><a href='Aliquot.html'>Aliquot</a></td>
+                <td class='propCollCol2'>Pertaining to a portion of the whole; any one of two or more samples of something, of the same volume or weight.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Analyte.html'>Analyte</a></td>
+                <td class='propCollCol2'>A liquid bulk product produced according to specified lab protocols, from a sample or analyte, intended for further analysis.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Portion.html'>Portion</a></td>
+                <td class='propCollCol2'>A physical sub-part of any sample.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Sample.html'>Sample</a></td>
+                <td class='propCollCol2'>Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions. Biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products.</td>
+            </tr>
+            
+                </table>
+               
+                <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+                    <tr class='dict_tbl_header'>
+                        <td colspan="2" style="background-color: #2980b9;color: white;">Clinical</td>
+                    </tr>
+                    
+            <tr>
+                <td class='propCollCol1'><a href='Demographic.html'>Demographic</a></td>
+                <td class='propCollCol2'>Data for the characterization of the patient by means of segmenting the population (e.g., characterization by age, sex, or race).</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Diagnosis.html'>Diagnosis</a></td>
+                <td class='propCollCol2'>Data from the investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Family History.html'>Family History</a></td>
+                <td class='propCollCol2'>Record of a patient's background regarding cancer events of blood relatives.
+</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Follow-Up.html'>Follow-Up</a></td>
+                <td class='propCollCol2'>A visit by a patient or study participant to a medical professional. A clinical encounter that encompasses planned and unplanned trial interventions, procedures and assessments that may be performed on a subject. A visit has a start and an end, each described with a rule. The process by which information about the health status of an individual is obtained before and after a study has officially closed; an activity that continues something that has already begun or that repeats something that has already been done.
+</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Exposure.html'>Exposure</a></td>
+                <td class='propCollCol2'>Clinically relevant patient information not immediately resulting from genetic predispositions.
+</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Treatment.html'>Treatment</a></td>
+                <td class='propCollCol2'>Record of the administration and intention of therapeutic agents provided to a patient to alter the course of a pathologic process.
+</td>
+            </tr>
+            
+                </table>
+               
+                <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+                    <tr class='dict_tbl_header'>
+                        <td colspan="2" style="background-color: #2980b9;color: white;">Data File</td>
+                    </tr>
+                    
+            <tr>
+                <td class='propCollCol1'><a href='File.html'>File</a></td>
+                <td class='propCollCol2'>Data files submitted by a user or generated by data analysis pipeline.</td>
+            </tr>
+            
+                </table>
+             
+                <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+                    <tr class='dict_tbl_header'>
+                        <td colspan="2" style="background-color: #2980b9;color: white;">Metadata</td>
+                    </tr>
+                    
+            <tr>
+                <td class='propCollCol1'><a href='Aliquot Run Metadata.html'>Aliquot Run Metadata</a></td>
+                <td class='propCollCol2'>Experimental metadata describing how an aliquot was processed within a study.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Protocol.html'>Protocol</a></td>
+                <td class='propCollCol2'>The formal plan of an experiment or research activity, including the objective, rationale, design, materials and methods for the conduct of the study; intervention description, and method of data analysis.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Study Run Metadata.html'>Study Run Metadata</a></td>
+                <td class='propCollCol2'>General experimental metadata describing study design.</td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1'><a href='Workflow Metadata.html'>Workflow Metadata</a></td>
+                <td class='propCollCol2'>Tools, versions and parameters used in data analysis pipeline/workflow for analyzing study data.</td>
+            </tr>
+            
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

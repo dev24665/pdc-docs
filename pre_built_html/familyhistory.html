@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Dictionary &mdash; PDC Documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=2709fde1"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-enum').click(function() {
+                var $button = $(this);
+                var $list = $button.prev('.enum-list');
+                $list.toggle();
+                $button.text($list.is(':visible') ? 'Show less' : 'Show more');
+            });
+        });
+    </script>
+    <style>
+        .itemCollTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itemCollTable td, .itemCollTable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .itemCollTable tr:nth-child(even) {
+           /* background-color: #f2f2f2; */
+        }
+        .itemCollTable tr:hover {
+            background-color: #ddd;
+        }
+        .itemCollTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .propCollCol1 .propCollCol2 .propCollCol3 .propCollCol4 .propCollCol5  {
+            width: 20%;
+        }
+       
+        .linksCollCol1 .linksCollCol1 .linksCollCol1{
+            width: 33%;
+        }
+        .itemLinksTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+     
+          .toggle-enum {
+            color: #246a92;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 25px 0 2px;
+            border: none; 
+            background-color: transparent;
+          }
+          ul.enum-list li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+          ul.unique_keys li {
+            list-style-type: disc; /* Ensures bullet points are shown */
+            padding-left: 20px; /* Adds space between bullet points and text */
+          }
+    </style>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Support and FAQs" href="support_and_faqs.html" />
+    <link rel="prev" title="Learning more about GraphQL" href="technical_resources_API_learn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          <a href="index.html" class="icon icon-home">
+            PDC Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_policies.html">Data Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_analysis_guides.html">Data Analysis Guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="technical_resources.html">Technical Resources</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tech_resources_API.html">PDC GraphQL API Overview</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true"><button class="toctree-expand" title="Open/close menu"></button>Data Dictionary</a><ul>    
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Administrative</a><ul>        
+<li class="toctree-l4"><a class=" current reference internal" href="case.html">Case</a></li>
+<li class="toctree-l4"><a class="reference internal" href="program.html">Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="study.html">Study</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biological</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="gene.html">Gene</a></li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Biospecimen</a><ul></ul>
+<li class="toctree-l4"><a class="reference internal" href="aliquot.html">Aliquot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="analyte.html">Analyte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="portion.html">Portion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sample.html">Sample</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Clinical</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="diagnosis.html">Diagnosis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="familyhistory.html">Family History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="followup.html">Follow-Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exposure.html">Exposure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="treatment.html">Treatment</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Data File</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="file.html">File</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Metadata</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="aliquotrunmetadata.html">Aliquot Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="protocol.html">Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="studyrunmetadata.html">Study Run Metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflowmetadata.html">Workflow Metadata</a></li></ul>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Processed</a><ul>    
+<li class="toctree-l4"><a class="reference internal" href="publication.html">Publication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geneabundance.html">Gene Abundance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_faqs.html">Support and FAQs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PDC Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="technical_resources.html">Technical Resources</a></li>
+      <li class="breadcrumb-item active">Data Dictionary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tech_resources_data_dictionary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+
+<div class="contentArea" >
+    <div class="pageTitleArea">
+        <!-- <div class="pageBackNav"><a href="{{linkback}}"> < back to data dictionary</a></div> -->
+   
+        <div class='pageTitle'><h1>Family History</h1></div>
+        <div class="pageDesc"></div>
+    </div>
+    <div>
+        
+        <div class='tableTitle'>Summary</div>
+        <table class='itemCollTable docutils align-default' cellpadding='0' cellspacing='1'>
+            <tr>
+                <td class='itemCollCol1'>Type</td>
+                <td class='itemCollCol2'>Family History</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Category</td>
+                <td class='itemCollCol2'>N/A</td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Description</td>
+                <td class='itemCollCol2'><div>N/A</div>
+                    <a href="#" target='_blank'>(N/A - N/A)</a>
+                </td>
+            </tr>
+            <tr>
+                <td class='itemCollCol1'>Unique Keys</td>
+                <td class='itemCollCol2'>
+                    <ul class="unique_keys">
+                        <li>family_history_id</li><li>family_history_submitter_id</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    
+    </div>
+    <br />
+   
+    <div class='tableTitle' id="links">Links</div>
+    <table class='itemLinksTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='linksCollCol1'>Name</td>
+            <td class='linksCollCol2'>Required</td>
+            <td class='linksCollCol3'>Label</td>
+        </tr>
+        
+        <tr>
+            <td class='linksCollCol1'><span class='dictionaryItem'><a href="Case.html">Case</a></span></td>
+            <td class='linksCollCol2'>True</td>
+            <td class='linksCollCol3'>Family History references the Case it is derived from.</td>
+        </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <div class='tableTitle' id="properties">Properties</div>
+    <table class='itemPropertiesTable docutils align-default' cellpadding='0' cellspacing='1'>
+        <tr class='dict_tbl_header'>
+            <td class='propCollCol1'>Name</td>
+            <td class='propCollCol2'>Description</td>
+            <td class='propCollCol3'>Acceptable Types/Values</td>
+            <td class='propCollCol4'>Required</td>
+            <td class='propCollCol5'>CDE</td>
+        </tr>
+        
+            <tr>
+                <td class='propCollCol1' id='relationship_age_at_diagnosis'>relationship_age_at_diagnosis</td>
+                <td class='propCollCol2'>The age (in years) when the patient's relative was first diagnosed.
+</td>
+                <td class='propCollCol3'>Number</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>5300571 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='relationship_gender'>relationship_gender</td>
+                <td class='propCollCol2'>The text term used to describe the gender of the patient's relative with a history of cancer.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>female</li><li>male</li><li>unknown</li><li>unspecified</li><li>not reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6161021 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='relationship_primary_diagnosis'>relationship_primary_diagnosis</td>
+                <td class='propCollCol2'>The text term used to describe the malignant diagnosis of the patient's relative with a history of cancer.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Adrenal Gland Cancer</li><li>Basal Cell Cancer</li><li>Bile Duct Cancer</li><li>Bladder Cancer</li><li>Blood Cancer</li><li>Bone Cancer</li><li>Brain Cancer</li><li>Breast Cancer</li><li>Cancer</li><li>Cervical Cancer</li></ul><ul class='enum-list' style='display:none;'><li>Chondrosarcoma</li><li>CNS Cancer</li><li>Colorectal Cancer</li><li>Esophageal Cancer</li><li>Ewing Sarcoma</li><li>Gallbladder Cancer</li><li>Gastric Cancer</li><li>Glioblastoma</li><li>Gynecologic Cancer</li><li>Head and Neck Cancer</li><li>Hematologic Cancer</li><li>Kaposi Sarcoma</li><li>Kidney Cancer</li><li>Laryngeal Cancer</li><li>Leukemia</li><li>Liver Cancer</li><li>Lung Cancer</li><li>Lymph Node Cancer</li><li>Lymphoma</li><li>Melanoma</li><li>Mesothelioma</li><li>Multiple Myeloma</li><li>Neuroblastoma</li><li>Osteosarcoma</li><li>Ovarian Cancer</li><li>Pancreas Cancer</li><li>Prostate Cancer</li><li>Rectal Cancer</li><li>Rhabdomyosarcoma</li><li>Sarcoma</li><li>Skin Cancer</li><li>Spleen Cancer</li><li>Testicular Cancer</li><li>Throat Cancer</li><li>Thyroid Cancer</li><li>Tongue Cancer</li><li>Tonsillar Cancer</li><li>Uterine Cancer</li><li>Wilms Tumor</li><li>Unknown</li><li>Not Reported</li><li>Pediatric Liver Cancer</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6161022 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='relationship_type'>relationship_type</td>
+                <td class='propCollCol2'>The subgroup that describes the state of connectedness between members of the unit of society organized around kinship ties.
+</td>
+                <td class='propCollCol3'>Enumeration<ul class='enum-list'><li>Adopted Daughter</li><li>Adopted Son</li><li>Adoptive Brother</li><li>Adoptive Father</li><li>Adoptive Mother</li><li>Adoptive Sister</li><li>Aunt</li><li>Brother</li><li>Brother-in-law</li><li>Child</li></ul><ul class='enum-list' style='display:none;'><li>Cousin</li><li>Daughter</li><li>Daughter-in-law</li><li>Domestic Partner</li><li>Father</li><li>Father-in-law</li><li>Female Cousin</li><li>First Cousin</li><li>First Cousin Once Removed</li><li>Foster Brother</li><li>Foster Daughter</li><li>Foster Father</li><li>Foster Mother</li><li>Foster Sister</li><li>Foster Son</li><li>Fraternal Twin Brother</li><li>Fraternal Twin Sibling</li><li>Fraternal Twin Sister</li><li>Full Brother</li><li>Full Sister</li><li>Grand Nephew</li><li>Grand Niece</li><li>Grandchild</li><li>Granddaughter</li><li>Grandfather</li><li>Grandmother</li><li>Grandparent</li><li>Grandson</li><li>Great Grandchild</li><li>Half Brother</li><li>Half Sibling</li><li>Half Sister</li><li>Husband</li><li>Identical Twin Brother</li><li>Identical Twin Sibling</li><li>Identical Twin Sister</li><li>Legal Guardian</li><li>Male Cousin</li><li>Maternal Aunt</li><li>Maternal First Cousin</li><li>Maternal First Cousin Once Removed</li><li>Maternal Grandfather</li><li>Maternal Grandmother</li><li>Maternal Grandparent</li><li>Maternal Great Aunt</li><li>Maternal Great Grandparent</li><li>Maternal Great Uncle</li><li>Maternal Half Brother</li><li>Maternal Half Sibling</li><li>Maternal Half Sister</li><li>Maternal Uncle</li><li>Mother</li><li>Mother-in-law</li><li>Natural Brother</li><li>Natural Child</li><li>Natural Daughter</li><li>Natural Father</li><li>Natural Grandchild</li><li>Natural Grandfather</li><li>Natural Grandmother</li><li>Natural Grandparent</li><li>Natural Mother</li><li>Natural Parent</li><li>Natural Sibling</li><li>Natural Sister</li><li>Natural Son</li><li>Nephew</li><li>Niece</li><li>Niece Second Degree Relative</li><li>Other</li><li>Parent</li><li>Paternal Aunt</li><li>Paternal First Cousin</li><li>Paternal First Cousin Once Removed</li><li>Paternal Grandfather</li><li>Paternal Grandmother</li><li>Paternal Grandparent</li><li>Paternal Great Aunt</li><li>Paternal Great Grandparent</li><li>Paternal Great Uncle</li><li>Paternal Half Brother</li><li>Paternal Half Sibling</li><li>Paternal Half Sister</li><li>Paternal Uncle</li><li>Refused</li><li>Sibling</li><li>Sister</li><li>Sister-in-law</li><li>Son</li><li>Son-in-law</li><li>Spouse</li><li>Step Child</li><li>Step Sibling</li><li>Stepbrother</li><li>Stepdaughter</li><li>Stepfather</li><li>Stepmother</li><li>Stepsister</li><li>Stepson</li><li>Twin Sibling</li><li>Uncle</li><li>Unrelated</li><li>Ward</li><li>Wife</li><li>Unknown</li><li>Not Reported</li><li>Adopted Brother</li><li>Adopted Sister</li><li>Female Sibling of Adopted Child</li><li>Male Sibling of Adopted Child</li></ul><button class='toggle-enum'>Show more items...</button></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>2690165 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='relative_with_cancer_history'>relative_with_cancer_history</td>
+                <td class='propCollCol2'>The yes/no/unknown indicator used to describe whether any of the patient's relatives have a history of cancer.
+</td>
+                <td class='propCollCol3'>Enumeration<ul><li>yes</li><li>no</li><li>unknown</li><li>not reported</li></ul></td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'>6161023 - caDSR </td>
+            </tr>
+            
+            <tr>
+                <td class='propCollCol1' id='relatives_with_cancer_history_count'>relatives_with_cancer_history_count</td>
+                <td class='propCollCol2'>The number of relatives the patient has with a known history of cancer.
+</td>
+                <td class='propCollCol3'>Integer</td>
+                <td class='propCollCol4'>False</td>
+                <td class='propCollCol5'> -  </td>
+            </tr>
+            
+    </table>
+</div>
+</div>
+</div>
